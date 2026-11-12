@@ -1,12 +1,27 @@
-# AcerrinLab - Hackatón MVP
+# AcerrinLab – Viruta (Hackatón Tren Solar 2026)
 
 **Equipo:** Maximo Acosta Gloss y José Manuel Fernández
 **Organización:** AcerrinLab
 
-Este repositorio contiene la documentación, el contexto y posteriormente alojará el código fuente del proyecto presentado en la hackatón. 
-Se desarrollará utilizando una arquitectura de **Monolito Modular con Spring Boot 4.x.x**, priorizando la velocidad de entrega y la simplicidad de despliegue para validar tracción antes del 13 de noviembre.
+Viruta es una web app para diseñar muebles a medida, verlos en tu espacio con realidad aumentada,
+saber qué materiales comprar y encargarlos a carpinterías locales de Jujuy.
 
-## Estructura del Repositorio
-- `/contexto/`: Documentación del negocio, reglas de la hackatón y requerimientos (archivos .md para sincronizar con la IA).
-- `/imagenes/`: Capturas de pantalla, assets y diagramas.
-- `/resultado/`: Entregables finales, links a la app y métricas de tracción.
+Este repositorio contiene toda la documentación del proyecto y, más adelante, el código fuente.
+Arquitectura: **monolito modular** con Spring Boot 4.x (backend) y React (frontend).
+
+## Estructura
+
+```
+doc/                          Documentación del proyecto (ver doc/README.md)
+├── 00_hackaton/              Reglas, criterios de evaluación, plan paso a paso y compendio de workshops
+├── 01_idea/                  DOC-01 informe descriptivo, idea original y contexto general
+├── 02_analisis/              DOC-02 estudio de mercado, encuestas, testimonios y requisitos (DOC-02A / DOC-02B)
+├── 03_visual/                Mockups de la interfaz
+├── 04_diseno_y_arquitectura/ DOC-04A flujo de arquitectura, tecnologías, (próximo) clases y casos de uso
+├── 05_plan_evolutivo/        DOC-05 plan por hitos hasta la V1
+├── 06_poc_entrega/           DOC-06 prueba de concepto y condiciones de entrega
+├── 07_programacion/          Resultados de la etapa de programación
+└── 08_testeo/                Resultados de la etapa de testeo
+imagenes/                     Capturas y assets para el video y la entrega
+resultado/                    Entregables finales, links a la app y métricas de tracción
+```

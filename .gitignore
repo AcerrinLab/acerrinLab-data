@@ -1,0 +1,8 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+# Secretos
+.env
+.env.*
+!.env.example

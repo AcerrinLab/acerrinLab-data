@@ -1,12 +1,12 @@
-# Viruta (AcerrinLab) – Requisitos funcionales (v3)
+# Requisitos funcionales
+## Viruta – plataforma web para diseñar, visualizar y encargar muebles a medida
 
-**Etapa:** Análisis, paso 3 – requisitos funcionales (los no funcionales están en `../requisitosNoFuncionales/requisitosNoFuncionales.md`)
-**Estado:** Borrador para aprobación (José Manuel Fernández / Maximo Acosta Gloss)
-**Fecha:** 12/11/2026
-**Cambios v3:** se agrega el **panel de la carpintería** como parte del MVP (WhatsApp queda solo como aviso que lleva al panel).
-**Cambios respecto de la v1:** reestructurado según el compendio de los workshops (enfoque vertical, MVP de 3 funcionalidades, máquina de estados, fuera de alcance explícito, honestidad de datos). Stack confirmado: **frontend React** + backend **Spring Boot**.
-
-**Fuentes:** encuesta a clientes (31 respuestas), encuesta a carpinterías (4 respuestas), 2 testimonios de carpinteros, `contexto/*.md` del repo y `viruta-hackaton-2026-contexto-completo.md` (workshops).
+**Código:** DOC-02A
+**Versión:** 0.3
+**Fecha:** 12 de noviembre de 2026
+**Estado:** Propuesto. Pendiente de aprobación del equipo (José Manuel Fernández / Maximo Acosta Gloss).
+**Bases:** encuestas y testimonios de `02_analisis/`, DOC-02, compendio de workshops (`00_hackaton/`). Stack: frontend React + backend Spring Boot.
+**Relacionado:** DOC-02B – Requisitos no funcionales.
 
 ---
 
@@ -192,3 +192,11 @@ Lead (contratos) ┼──> Backend:  RF-12..RF-19 (usuarios, pedidos, pagos)   
 ## 7. Puntos abiertos
 1. **Muestra de carpinterías chica (4):** no se preguntó si aceptan la comisión ni cuánto tiempo pierden midiendo. Conviene sumar 2 o 3 respuestas antes del pitch.
 2. **Plazos de vencimiento** del pedido (72 h y 7 días): son una propuesta, ajustar si hace falta.
+
+## Historial
+
+| Versión | Fecha | Cambio |
+| --- | --- | --- |
+| 0.1 | 12/11/2026 | Primera versión a partir de encuestas y testimonios. |
+| 0.2 | 12/11/2026 | Reestructurado según los workshops: MVP vertical de 3 funcionalidades, criterios de aceptación, máquina de estados y fuera de alcance. |
+| 0.3 | 12/11/2026 | Panel de la carpintería dentro del MVP; separación en DOC-02A (funcionales) y DOC-02B (no funcionales); formato del estándar doc/. |
