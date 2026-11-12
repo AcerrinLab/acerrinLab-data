@@ -2,7 +2,7 @@
 ## Plataforma web para crear y cotizar muebles a medida
 
 **Código:** DOC-06  
-**Versión:** 0.1  
+**Versión:** 0.2  
 **Fecha del documento:** 4 de noviembre de 2026  
 **Estado:** Protocolo propuesto. Pruebas no ejecutadas.  
 **Bases:** DOC-01 y DOC-02 V0.2; DOC-04A, DOC-04B y DOC-05 V0.1.
@@ -19,14 +19,14 @@ Este documento es un estándar interno propuesto para este proyecto, no una norm
 
 | Dato | Estado |
 | --- | --- |
-| Fecha límite del hackathon | Pendiente de confirmar. |
+| Fecha límite del hackathon | Entrega del proyecto: 13/11/2026. Hackatón: 22/11/2026. |
 | Inicio de implementación | Pendiente de acordar. |
 | Revisión del núcleo H0–H2 | Se calendariza al confirmar inicio y dedicación. |
 | Revisión del recorrido H3–H5 | Se calendariza después de estimar el núcleo. |
 | Presentación del MVP H6 | Pendiente del plazo y disponibilidad del piloto. |
-| Responsable de desarrollo | Pendiente de asignación. |
-| Responsable de aceptación técnica | Pendiente de asignación. |
-| Carpintero revisor y localidad | Pendientes de confirmación. |
+| Responsable de desarrollo | Maximo Acosta Gloss (programación). |
+| Responsable de aceptación técnica | José Manuel Fernández (análisis y diseño). Pendiente de confirmar. |
+| Carpintero revisor y localidad | Jujuy. Carpintero pendiente; candidatos: talleres que respondieron la encuesta. |
 | Operador de solicitudes | Pendiente de asignación. |
 
 Las fechas y horas se expresarán en horario de Argentina. Ningún plazo está comprometido en esta versión. Las personas podrán asumir varios roles en un equipo pequeño, dejando registrada la revisión que realizaron.
@@ -248,3 +248,4 @@ Completar fechas, responsables y entorno de aceptación; confirmar los casos y l
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
 | 0.1 | 04/11/2026 | Protocolo inicial, casos manuales, matrices de aceptación y estándar de entrega. Fechas y ejecución pendientes. |
+| 0.2 | 12/11/2026 | Fechas, responsables y localidad completados con lo definido por el equipo. Alcance de pagos y placas pendiente de alinear (ver `coherencia_y_decisiones.md`). |

@@ -6,19 +6,21 @@ concepto y luego la V1. Hacer todo de una vez da un producto mediocre.
 
 ## Índice
 
+> **Antes de seguir:** hay diferencias de alcance entre documentos. Ver [`coherencia_y_decisiones.md`](coherencia_y_decisiones.md).
+
 | Código | Documento | Carpeta | Estado |
 |---|---|---|---|
 | — | Reglas, criterios, plan paso a paso y workshops | `00_hackaton/` | Referencia |
-| DOC-01 | Informe descriptivo (idea principal) | `01_idea/` | V0.2 borrador |
-| DOC-02 | Estudio de mercado y validación | `02_analisis/` | V0.2 + encuestas y testimonios reales |
+| DOC-01 | Informe descriptivo (idea principal) | `01_idea/` | V0.3 borrador |
+| DOC-02 | Estudio de mercado y validación | `02_analisis/` | V0.3 + encuestas y testimonios |
 | DOC-02A | Requisitos funcionales | `02_analisis/requisitos/` | V0.3 pendiente de aprobación |
 | DOC-02B | Requisitos no funcionales | `02_analisis/requisitos/` | V0.3 pendiente de aprobación |
 | DOC-03 | Modelos visuales (mockups) | `03_visual/` | 2 mockups |
-| DOC-04A | Flujo de arquitectura (del usuario al producto final) | `04_diseno_y_arquitectura/` | V0.1 |
+| DOC-04A | Flujo de arquitectura (del usuario al producto final) | `04_diseno_y_arquitectura/` | V0.2 |
 | DOC-04B | Arquitectura técnica (cómo se conectan los programas: backend, n8n, Gemini, Maps, Mercado Pago) | `04_diseno_y_arquitectura/` | **Pendiente.** Base: `tecnologias.md` |
 | — | Diagrama de clases y casos de uso | `04_diseno_y_arquitectura/` | **Pendiente** (etapa Diseño) |
-| DOC-05 | Plan evolutivo (hitos H0 a H6) | `05_plan_evolutivo/` | V0.1 |
-| DOC-06 | POC y condiciones de entrega | `06_poc_entrega/` | V0.1 |
+| DOC-05 | Plan evolutivo (hitos H0 a H6) | `05_plan_evolutivo/` | V0.2, a revisar con Maxi |
+| DOC-06 | POC y condiciones de entrega | `06_poc_entrega/` | V0.2 |
 | — | Resultados de programación y testeo | `07_programacion/`, `08_testeo/` | Vacío |
 
 ## Estándar de trabajo
@@ -33,7 +35,15 @@ concepto y luego la V1. Hacer todo de una vez da un producto mediocre.
 7. Con la carpeta completa, se le da acceso a un agente (Claude o Codex) para que la analice y trabaje sobre ella.
 
 ## Convenciones
-- Cada documento empieza con **Código, Versión, Fecha, Estado y Bases**, y termina con un **Historial** de versiones.
+
+**Nombres de archivo**
+- Todo en minúsculas, palabras separadas con guion bajo (`_`), sin tildes ni espacios.
+- Documentos formales del estándar: `DOC-XX_nombre.md` (por ejemplo `DOC-02A_requisitos_funcionales.md`). Archivos que forman parte de un documento llevan su código: `DOC-03_mockup_01_mueble_en_el_ambiente.png`.
+- Material de apoyo sin código: nombre descriptivo (`encuesta_clientes.csv`, `testimonio_01_carpintera_melamina.md`). Si hay varios del mismo tipo, numerarlos (`_01`, `_02`).
+- Carpetas: `NN_nombre`, en el orden de trabajo.
+
+**Contenido**
+- Cada documento formal empieza con **Código, Versión, Fecha, Estado y Bases**, y termina con un **Historial** de versiones.
 - La versión va dentro del documento y en el historial, no en el nombre del archivo.
 - Lo que no está validado se marca como **propuesto**, **pendiente** o **estimado**.
 

@@ -2,9 +2,10 @@
 ## Plataforma web para diseñar y cotizar muebles a medida
 
 **Código:** DOC-02  
-**Versión:** 0.2  
+**Versión:** 0.3  
 **Fecha de consulta:** 4 de noviembre de 2026  
-**Estado:** Investigación exploratoria y plan de validación. Trabajo de campo pendiente.  
+**Estado:** Investigación exploratoria. Trabajo de campo inicial realizado: encuesta a 31 clientes, encuesta a 4 carpinterías y 2 testimonios (`encuestas/`, `testimonios/`; resultados consolidados en DOC-02A §2). Entrevistas y pruebas de uso pendientes.  
+**Alineación (12/11/2026):** hay puntos de alcance que difieren de lo ya definido por el equipo. Ver `doc/coherencia_y_decisiones.md`.  
 **Documento base:** DOC-01 — Informe descriptivo V0.2.
 
 ## 1. Objetivo
@@ -31,7 +32,7 @@ La comparación es selectiva, no un relevamiento exhaustivo. Los referentes inte
 
 **Oferta inicial:** una o dos carpinterías que fabriquen muebles de placas y estén dispuestas a revisar solicitudes. Antes del lanzamiento debe confirmarse capacidad, zona de atención y condiciones de respuesta.
 
-**Geografía:** una única localidad o zona a definir según acceso real a clientes y profesionales. No se elige una ciudad automáticamente por la residencia del equipo.
+**Geografía:** Jujuy (San Salvador de Jujuy y alrededores), donde el equipo ya obtuvo respuestas de clientes y de carpinterías. Es requisito de participación del hackatón.
 
 | Segmento | Necesidad a comprobar | Prioridad propuesta |
 | --- | --- | --- |
@@ -168,7 +169,7 @@ Los valores se completarán con entrevistas y registros del piloto. Una proyecci
 | Comisión por contratación | Ingreso vinculado al trabajo cerrado. | ¿Cómo confirmar el cierre y evitar que el seguimiento resulte costoso? |
 | Cobro por ficha o servicio de diseño | Valor directo al cliente por documentación. | ¿Pagará antes de tener un presupuesto y qué espera recibir? |
 
-No se selecciona ni se fija precio en esta versión. Para el piloto se propone acceso sin cobro, con alcance y duración definidos. Su conversión no demostraría disposición a pagar.
+**Decisión del equipo (12/11/2026):** se adopta la **comisión por trabajo concretado** (8% a 12%, a cargo de la carpintería). Lo respaldan los datos: solo el 19% de los clientes pagaría una suscripción. Queda pendiente decidir si la seña por Mercado Pago entra en el MVP. No se fija precio final en esta versión. Para el piloto se propone acceso sin cobro, con alcance y duración definidos. Su conversión no demostraría disposición a pagar.
 
 ## 13. Captación y operación inicial
 
@@ -230,3 +231,4 @@ Fuentes consultadas el 04/11/2026. Las descripciones comerciales pertenecen a su
 | 0.1 | 04/11/2026 | Investigación documental inicial, comparación de alternativas y protocolo propuesto de validación. Sin trabajo de campo ejecutado. |
 
 | 0.2 | 04/11/2026 | Adecuación al editor modular de muebles; nuevos segmentos, hipótesis y tareas de creación. Se conservan fuentes y pendientes; no se realizaron nuevas entrevistas ni investigación externa para esta revisión. |
+| 0.3 | 12/11/2026 | Registro del trabajo de campo realizado, zona Jujuy y modelo de comisión elegido por el equipo. |

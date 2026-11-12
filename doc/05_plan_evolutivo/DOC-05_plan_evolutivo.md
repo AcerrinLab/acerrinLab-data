@@ -2,9 +2,11 @@
 ## Plataforma web para crear y cotizar muebles a medida
 
 **Código:** DOC-05  
-**Versión:** 0.1  
+**Versión:** 0.2  
 **Fecha:** 4 de noviembre de 2026  
-**Estado:** Plan propuesto; implementación y validación pendientes.  
+**Estado:** Plan propuesto; **pendiente de revisión con Maxi** (hitos, fechas y responsables).  
+**Fecha límite conocida:** entrega del hackatón el 13/11/2026.  
+**Alineación (12/11/2026):** hay puntos de alcance que difieren de lo ya definido por el equipo. Ver `doc/coherencia_y_decisiones.md`.  
 **Bases:** DOC-01 y DOC-02 V0.2, modelos visuales, DOC-04A y DOC-04B V0.1.
 
 ## 1. Objetivo
@@ -225,3 +227,4 @@ Después de esa definición, la primera tarea de construcción será H0: base de
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
 | 0.1 | 04/11/2026 | Hitos del núcleo, recorrido y MVP piloto; dependencias, evidencias y evoluciones posteriores. |
+| 0.2 | 12/11/2026 | Se registra la fecha límite y se marca para revisión conjunta del equipo. Sin cambios en los hitos. |

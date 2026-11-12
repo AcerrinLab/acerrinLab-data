@@ -2,10 +2,12 @@
 ## Plataforma web para crear y cotizar muebles a medida
 
 **Código:** DOC-04A  
-**Versión:** 0.1  
+**Versión:** 0.2  
 **Fecha:** 4 de noviembre de 2026  
 **Estado:** Arquitectura propuesta para el MVP; pendiente de POC.  
-**Bases:** DOC-01 y DOC-02, contenido V0.2, y modelos visuales conceptuales.
+**Bases:** DOC-01 y DOC-02, contenido V0.2, y modelos visuales conceptuales.  
+**Stack definido por el equipo:** `tecnologias.md` (React + React Three Fiber + `<model-viewer>`; Spring Boot 4.x monolito modular; MySQL).  
+**Alineación (12/11/2026):** hay puntos de alcance que difieren de lo ya definido por el equipo. Ver `doc/coherencia_y_decisiones.md`.  
 
 ## 1. Objetivo y decisión central
 
@@ -243,3 +245,4 @@ Los límites de rendimiento, tolerancias, dispositivos, fechas y condiciones med
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
 | 0.1 | 04/11/2026 | Arquitectura inicial para editor modular, visualización, documentación y solicitudes del MVP. |
+| 0.2 | 12/11/2026 | Referencia al stack definido. Diferencias de alcance (cuentas, panel de carpintería, WhatsApp, AR) señaladas en `coherencia_y_decisiones.md`. |

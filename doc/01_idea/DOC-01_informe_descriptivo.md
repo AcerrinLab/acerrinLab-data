@@ -2,10 +2,12 @@
 ## Plataforma web para diseñar y cotizar muebles a medida
 
 **Código:** DOC-01  
-**Versión:** 0.2  
+**Versión:** 0.3  
 **Fecha:** 4 de noviembre de 2026  
 **Estado:** Borrador inicial para revisión  
-**Nombre comercial:** Pendiente de definición
+**Nombre comercial:** Viruta (AcerrinLab)  
+**Equipo:** José Manuel Fernández y Maximo Acosta Gloss  
+**Alineación (12/11/2026):** hay puntos de alcance que difieren de lo ya definido por el equipo. Ver `doc/coherencia_y_decisiones.md`.  
 
 ## 1. Resumen de la propuesta
 
@@ -130,7 +132,7 @@ La plataforma facilitará el pedido inicial; el alcance definitivo del trabajo y
 | Existe interés de profesionales en recibir solicitudes. | Entrevistas y acuerdo con una carpintería piloto. |
 | Plazo y recursos disponibles. | Confirmar reglas del hackathon, integrantes, dedicación y presupuesto. |
 
-No se han fijado aún tecnologías, proveedores de IA, costos operativos, fecha de entrega ni metas numéricas de validación.
+Actualización 12/11/2026: la entrega del hackatón es el **13 de noviembre de 2026**; las tecnologías están definidas en `04_diseno_y_arquitectura/tecnologias.md` (React + Spring Boot, monolito modular). Siguen pendientes los costos operativos y las metas numéricas de validación.
 
 ## 13. Condiciones generales de calidad
 
@@ -168,5 +170,5 @@ La paleta de componentes define qué elementos puede agregar el usuario. La pale
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
 | 0.1 | 04/11/2026 | Primera descripción del proyecto y delimitación propuesta del MVP. Pendiente de revisión del equipo y validación externa. |
-
 | 0.2 | 04/11/2026 | Editor modular como función principal; muebles generales, paletas, operaciones y validación de creación. Escritorio conservado como ejemplo. |
+| 0.3 | 12/11/2026 | Nombre comercial, equipo, fecha de entrega y tecnologías actualizados. Diferencias de alcance señaladas en `coherencia_y_decisiones.md`. |
