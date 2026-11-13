@@ -1,230 +1,228 @@
 # Plan evolutivo
-## Plataforma web para crear y cotizar muebles a medida
+## Viruta – plataforma web para diseñar, visualizar y encargar muebles a medida
 
-**Código:** DOC-05  
-**Versión:** 0.2  
-**Fecha:** 4 de noviembre de 2026  
-**Estado:** Plan propuesto; **pendiente de revisión con Maxi** (hitos, fechas y responsables).  
-**Fecha límite conocida:** entrega del hackatón el 13/11/2026.  
-**Alineación (12/11/2026):** hay puntos de alcance que difieren de lo ya definido por el equipo. Ver `doc/coherencia_y_decisiones.md`.  
-**Bases:** DOC-01 y DOC-02 V0.2, modelos visuales, DOC-04A y DOC-04B V0.1.
+**Código:** DOC-05
+**Versión:** 0.3
+**Fecha:** 13 de noviembre de 2026
+**Estado:** Propuesto. Pendiente de aprobación del equipo (José Manuel Fernández / Maximo Acosta Gloss).
+**Bases:** DOC-01 V0.4, DOC-02A y DOC-02B V0.3, DOC-04A V0.3, `00_hackaton/paso_a_paso.md`, `04_diseno_y_arquitectura/tecnologias.md`, `coherencia_y_decisiones.md`.
+**Fechas:** entrega del proyecto el 13/11/2026 · hackatón el 22/11/2026.
+
+---
 
 ## 1. Objetivo
 
-Organizar el desarrollo en entregas que puedan ejecutarse, demostrarse y revisarse. El producto permitirá crear muebles sencillos con una paleta modular, visualizarlos en su ambiente, obtener documentación preliminar y solicitar presupuesto.
+Ordenar la construcción del MVP definido en DOC-02A en entregas que se puedan demostrar y probar, una por una, siguiendo las dependencias entre requisitos. La tracción (lista de espera y métricas) se trabaja en paralelo desde el primer día porque es lo que más pesa en la evaluación del hackatón.
 
-La prioridad inicial será demostrar que una misma definición de piezas y relaciones produce geometría, plano y cómputo coherentes. Después se completará el recorrido comercial. Un escritorio será un caso de prueba, no una restricción del producto.
+Esta versión reemplaza a la 0.2. Se quitó el alcance del borrador del 4/11 que no coincidía con lo que definió el equipo: el editor modular desde cero, la foto del ambiente como forma principal de visualizar, el producto sin cuentas ni panel de carpintería, el producto sin pagos y la atención manual del piloto.
 
-No se fijan fechas o estimaciones de horas sin conocer dedicación del equipo y plazo del hackathon. DOC-06 establecerá el calendario y las condiciones de la prueba. Todos los hitos de este plan comienzan en estado pendiente.
+## 2. Alcance de referencia
 
-## 2. Niveles de entrega
+El alcance es el de DOC-02A:
 
-| Nivel | Qué demuestra | Qué no permite afirmar todavía |
-| --- | --- | --- |
-| POC del núcleo | Crear dos muebles sencillos con el mismo editor y obtener resultados dimensionales coherentes. | Que existe un servicio completo de cotización. |
-| POC del recorrido | Agregar ambiente, guardado, documentos y registro real de una solicitud de prueba. | Que hay demanda comercial o capacidad sostenida de atención. |
-| MVP piloto | Recorrido usable y atención por una carpintería participante, con prueba observada y pendientes conocidos. | Que el modelo de negocio es rentable o escalable. |
-| Evoluciones posteriores | Ampliaciones elegidas por evidencia del piloto. | Que todas deban construirse o tengan fecha comprometida. |
+| Funcionalidad | Qué resuelve | Requisitos |
+|---|---|---|
+| **F1 – Diseñá y probalo en tu espacio** | Plantillas paramétricas, medidas del espacio con aviso, material y color, realidad aumentada, guardado y guía de cómo medir. | RF-01 a RF-06 |
+| **F2 – Sabé qué comprar** | Despiece, cantidad de placas, herrajes y barniz, costo estimado. | RF-07 a RF-10 |
+| **F3 – Encargalo a una carpintería** | Cuentas por rol, perfil y mapa de carpinterías, pedido, aviso por WhatsApp, presupuesto, seña por Mercado Pago con comisión, estados y panel de la carpintería. | RF-12 a RF-19, RF-27 a RF-30 |
+| **Tracción** | Lista de espera con contador y panel de métricas. | RF-20, RF-21 |
 
-Las dos comprobaciones técnicas forman partes de la POC general prevista en DOC-04A. Aprobar solo el núcleo no equivale a entregar el MVP.
+Lo que queda **post-MVP** y **fuera de alcance** está en DOC-02A §4 y §5. Este plan no agrega funcionalidades.
 
 ## 3. Vista general de hitos
 
-| Hito | Entrega | Depende de | Condición principal de cierre |
-| --- | --- | --- | --- |
-| H0 | Base y casos de referencia | Documentación inicial | Paleta mínima, casos y reglas iniciales definidos. |
-| H1 | Motor de piezas y relaciones | H0 | Dos tipologías calculadas con resultados contrastados. |
-| H2 | Editor modular y 3D | H1 | Crear y modificar ambas tipologías con la misma paleta. |
-| H3 | Guardado y documentación | H2 | Recuperar proyecto y generar plano, cómputo y PDF coherentes. |
-| H4 | Mueble en el ambiente | H2; integración con H3 | Colocación visual usable sin alterar medidas. |
-| H5 | Solicitudes y atención de prueba | Captura de H3; ambiente de H4 para prueba completa | Envío persistente, único ante reintentos y recuperable por el operador. |
-| H6 | MVP piloto y demostración | H0–H5 | Recorrido completo probado, profesional disponible y entrega documentada. |
+| Hito | Entrega | Requisitos | Depende de | Responsable |
+|---|---|---|---|---|
+| **T** | Tracción (en paralelo, desde el día 1) | RF-20, RF-21 | — | A definir |
+| **H0** | Diseño, base del proyecto y contratos | Diagrama de clases, casos de uso, RNF-06, RNF-08, RNF-12, RNF-13 | DOC-02A y DOC-02B aprobados | José (diseño) · Maxi (base) |
+| **H1** | Motor de materiales (F2) | RF-07 a RF-10 | H0 | Maxi |
+| **H2** | Diseño 3D y realidad aumentada (F1) | RF-01 a RF-06 | H0 | Maxi |
+| **H3** | Carpinterías, pedidos y panel (F3) | RF-12 a RF-15, RF-17, RF-19, RF-27 a RF-29 | H0; H1 y H2 para el detalle del pedido | Maxi |
+| **H4** | Aviso y cobro (F3) | RF-16, RF-18, RF-30 | H3 | Maxi |
+| **H5** | Seguridad, deploy y prueba con personas | RNF-08, RNF-09, RNF-11, RNF-13 | H1 a H4 | Maxi · José |
+| **H6** | Entrega y video | Casos de uso probados y video | H5 | A definir |
 
-Las entrevistas de DOC-02 pueden comenzar durante H0 y continuar mientras se construye. La preparación del profesional y del entorno de solicitudes puede avanzar antes de terminar H4. Estas posibilidades de trabajo concurrente no implican asignación de tareas a agentes ni responsabilidades ya acordadas.
+Responsables según `paso_a_paso.md`: análisis y diseño a cargo de José, programación a cargo de Maxi.
 
-## 4. H0 — Base del proyecto y casos de referencia
+**Trabajo en paralelo** (igual que DOC-02A §6): una vez definidos los contratos en H0, H1 (backend), H2 (frontend) y H3 (backend y panel) avanzan al mismo tiempo, cada uno con su agente y su rama. La tracción (T) corre aparte durante todo el proyecto.
 
-**Resultado:** una base mínima sobre la que pueda construirse y verificarse el editor.
+```
+                 ┌──> H1 Motor de materiales (backend)       ──┐
+H0 Diseño y      ├──> H2 Diseño 3D y AR (frontend)           ──┤
+contratos        ┼──> H3 Carpinterías y pedidos (back + panel)──┼──> H4 Aviso y cobro ──> H5 Seguridad, deploy y prueba ──> H6 Entrega y video
+                 └──────────────────────────────────────────────┘
+T Tracción: lista de espera y métricas (en paralelo, desde el día 1)
+```
 
-Trabajo:
+---
 
-- Crear repositorio y estructura acordada en DOC-04B, registrar versiones y comprobar compilación.
-- Definir tablero, lateral y estante, materiales iniciales y convenciones de unidades y ejes.
-- Preparar dos casos manuales: un estante o mueble abierto y un escritorio sencillo de tableros, sin cajonera obligatoria.
-- Documentar medidas, piezas esperadas, relaciones, supuestos y aspectos pendientes de revisión profesional.
-- Definir un caso intencionalmente incompleto o conflictivo para comprobar avisos.
-- Iniciar entrevistas y conseguir una persona de carpintería que pueda revisar las reglas.
+## 4. T — Tracción (en paralelo)
 
-**Cierre:** los dos casos tienen resultados esperados calculados fuera de la aplicación y alcance constructivo explícito. Si no hay revisión profesional, se puede continuar la prueba geométrica, identificando las reglas constructivas como provisionales; no habilita un piloto de fabricación.
+**Resultado:** números reales, con link o captura, para mostrar en la entrega.
 
-**Evidencia:** casos de referencia, inventario mínimo del catálogo y proyecto que compila.
+- Lista de espera para clientes y para carpinterías, con **contador visible** del número real de inscriptos (RF-20).
+- Panel interno con usuarios, diseños creados, pedidos y señas cobradas, sacado de la base de datos (RF-21).
+- Sumar 2 o 3 respuestas más de carpinterías antes del pitch (DOC-02A §7, punto abierto 1).
 
-## 5. H1 — Motor de piezas, relaciones y cómputo
+**Cierre:** el contador y el panel muestran datos reales, no cargados a mano (RNF-10).
+**Evidencia:** número y link o captura de cada métrica.
 
-**Resultado:** transformar datos editables en geometría resuelta y cantidades sin depender del visor.
+## 5. H0 — Diseño, base del proyecto y contratos
 
-Trabajo:
+**Resultado:** el diseño aprobado y una base sobre la que se pueda construir en paralelo.
 
-- Implementar formato del proyecto, IDs y versiones.
-- Resolver posiciones y parámetros dependientes mediante relaciones simples sin ciclos.
-- Calcular envolvente y dimensiones generales.
-- Producir piezas, proyecciones y avisos básicos de datos o interferencias.
-- Contar cantos y herrajes únicamente cuando existan reglas definidas; marcar lo restante como pendiente.
-- Usar el mismo módulo en un ensayo de navegador y servidor para comprobar compatibilidad temprana.
+Diseño (José):
+- Aprobar DOC-02A y DOC-02B.
+- Diagrama de clases base y casos de uso.
+- Tareas de backend y frontend.
 
-**Cierre:** ambos casos coinciden con los resultados manuales; cambiar una dimensión dependiente actualiza sus piezas. Referencias inválidas y ciclos se detectan. El caso incompleto conserva sus pendientes sin inventar cantidades.
+Base (Maxi):
+- Backend Java + Spring Boot 4.x, **monolito modular** con los módulos `diseño`, `materiales`, `carpinterías`, `pedidos`, `pagos`, `notificaciones` y `usuarios`, que se comunican solo por interfaces públicas o eventos (RNF-06). Proyectos con nombre `Viruta-<módulo>`.
+- Frontend React desplegado en Vercel.
+- MySQL y backend en Docker, mismo entorno en desarrollo y producción (RNF-13).
+- Contratos de la API en OpenAPI/Swagger, para que frontend y backend avancen en paralelo (RNF-12).
+- Repositorio público: claves en `.env` ignorado por git y escaneo de secretos activado (RNF-08).
+- Convención de medidas: milímetros enteros, con origen en la esquina frontal izquierda inferior del mueble; X hacia la derecha, Y hacia el fondo y Z hacia arriba (RNF-01).
 
-**Evidencia:** resultados comparados y pruebas de las reglas críticas. No se exige una cantidad arbitraria de tests.
+Casos de prueba fijos (se escriben primero, siguiendo TDD):
 
-## 6. H2 — Editor modular y visor 3D
+| Caso | Entrada | Resultado esperado | Requisito |
+|---|---|---|---|
+| Testimonio 2 | 5 piezas de 1800 × 400 mm en placa de 2400 × 1800 mm | Cantidad de placas correcta, redondeada hacia arriba | RF-08 |
+| Estante | Plantilla estante de 800 × 900 × 300 mm, tablero de 18 mm, un estante | 2 laterales de 900 × 300 mm; tapa, base y estante de 764 × 300 mm (5 piezas) | RF-07 |
+| Estante más ancho | El mismo estante, con 1000 mm de ancho | Las 3 piezas interiores pasan a 964 × 300 mm; los laterales no cambian | RF-07 |
+| Mesa | Plantilla mesa de 1200 × 750 × 600 mm, tablero de 18 mm | Cubierta de 1200 × 600 mm y 2 laterales de 732 × 600 mm (3 piezas) | RF-07 |
+| Fuera de rango | Medida en cero o fuera del rango de la plantilla | Se rechaza sin perder el último diseño válido | RF-01 |
 
-**Resultado:** el usuario puede crear su composición a partir de la paleta.
+El detalle de estos casos, y los de medidas inválidas y espacio insuficiente, está en DOC-06 §5.
 
-Trabajo:
+**Cierre:** el proyecto compila y levanta con Docker, los contratos se ven en Swagger y los casos de prueba están escritos.
 
-- Agregar y seleccionar elementos; modificar medidas y materiales.
-- Ubicar elementos con panel numérico y referencias de colocación.
-- Duplicar y eliminar con tratamiento explícito de relaciones dependientes.
-- Incorporar deshacer y rehacer sobre operaciones confirmadas.
-- Visualizar el modelo, girar la cámara y acercar o alejar.
-- Mostrar avisos y dimensiones generales derivados del motor.
+## 6. H1 — Motor de materiales (F2)
 
-**Cierre:** una persona del equipo crea desde vacío las dos tipologías sin editar el código ni recurrir a controles específicos de una sola clase de mueble. Deshacer restaura medidas y relaciones; cámara y zoom no alteran el cómputo.
+**Resultado:** a partir de una plantilla y sus medidas, el sistema dice qué piezas cortar y qué comprar.
 
-**Evidencia:** demo ejecutable y registro breve de las operaciones. Aquí se evalúa la POC del núcleo junto con H1; la prueba con usuarios externos se realiza después.
+- Despiece con medidas en mm y cantidad (RF-07).
+- Cantidad de placas o tablas según el tamaño estándar del material, con **cálculo simple** (piezas por placa, redondeo hacia arriba) y marcado como **estimado** (RF-08). La optimización real de cortes queda para después.
+- Tornillos, bisagras o correderas y litros de barniz o pintura (RF-09).
+- Costo estimado de materiales (RF-10), **solo si conseguimos precios de referencia con fuente y fecha**. Si no, pasa a post-MVP.
+- Un cálculo por material con patrón Strategy (RNF-07).
 
-**Alcance acotado:** agregar mediante botón es suficiente en esta etapa. El arrastre desde la paleta puede incorporarse después sin bloquear el núcleo.
+**Cierre:** pasan los casos de H0 y los criterios de aceptación de RF-07 a RF-10. Cobertura del módulo `materiales` de 80% o más (RNF-12).
+**Evidencia:** resultado de las pruebas. Es la "tecnología interesante" del pitch.
 
-## 7. H3 — Recuperación, planos y ficha
+## 7. H2 — Diseño 3D y realidad aumentada (F1)
 
-**Resultado:** conservar un diseño y comunicarlo mediante documentación consistente.
+**Resultado:** el cliente arma su mueble desde una plantilla, ve si entra y lo ve en su casa.
 
-Trabajo:
+- Plantillas paramétricas de estante, mesa y bajo mesada: ancho, alto, profundidad y cantidad de estantes, con el modelo 3D actualizado en menos de 1 s (RF-01).
+- Medidas del espacio, con profundidad adelante y atrás, y aviso si el mueble no entra (RF-02).
+- Material (pino, melamina, aglomerado) y color (RF-03).
+- Realidad aumentada con `<model-viewer>` en Android (Chrome) e iPhone (Safari); en PC, visor 3D (RF-04).
+- Guardar y reabrir en "Mis proyectos" (RF-05).
+- Guía visual de cómo medir el espacio (RF-06).
+- Mobile first, Android primero (RNF-05). Visor 3D a 30 fps o más en gama media y modelo AR de menos de 5 MB (RNF-04).
 
-- Guardar borrador y foto en el navegador con estados reales de guardado.
-- Recuperar el último borrador confirmado al reabrir.
-- Exportar e importar JSON editable sin fotografía ni datos personales, según DOC-04B.
-- Presentar frente, planta y lateral desde la geometría común.
-- Mostrar piezas y materiales con identificación y pendientes.
-- Generar PDF desde una revisión fija, incluyendo cotas, unidades, avisos y tablas paginadas.
+**Cierre:** pasan los criterios de aceptación de RF-01 a RF-06. Una persona sin experiencia crea su primer mueble y lo ve en AR en menos de 5 minutos (RNF-02).
+**Evidencia:** demo en un celular Android real.
 
-**Cierre:** reabrir o importar conserva geometría y relaciones. El PDF y el plano coinciden con la revisión exportada; las tablas no se cortan y los caracteres son legibles. Un archivo incompatible produce un mensaje sin reemplazar el borrador válido.
+## 8. H3 — Carpinterías, pedidos y panel (F3)
 
-**Evidencia:** archivo editable de cada caso, PDF de ejemplo de una y varias páginas y revisión visual de las salidas.
+**Resultado:** el cliente pide presupuesto y la carpintería lo trabaja desde su panel.
 
-## 8. H4 — Visualización en el ambiente
+- Registro e inicio de sesión con roles Cliente y Carpintería, con JWT (RF-12).
+- Perfil de la carpintería: nombre, zona, WhatsApp y materiales (RF-13).
+- Mapa de carpinterías cercanas que trabajan el material elegido (Google Maps) (RF-14).
+- Pedido de presupuesto con diseño, medidas, material y despiece (RF-15):
+  - Al enviar se guarda una **copia fija** del diseño; editar después no cambia lo enviado.
+  - Un reintento **no duplica** el pedido.
+  - Los datos personales se piden recién al pedir presupuesto.
+- Presupuesto que separa materiales y mano de obra (RF-17).
+- Estados del pedido según la máquina de estados de DOC-02A, con patrón State (RF-19, RNF-07).
+- Panel de la carpintería: bandeja con filtros (RF-27), detalle con visor 3D, despiece y placas (RF-28) y avisos en tiempo real (RF-29).
 
-**Resultado:** visualizar el mueble creado sobre una fotografía del espacio.
+**Cierre:** pasan los criterios de aceptación de esos requisitos. Un cliente no puede entrar a la bandeja de una carpintería.
 
-Trabajo:
+## 9. H4 — Aviso y cobro (F3)
 
-- Cargar una imagen y registrar medidas reales ingresadas por el usuario.
-- Ajustar encuadre, ubicación y tamaño aparente sin cambiar las piezas.
-- Ofrecer comparación con la imagen original.
-- Incorporar una captura compuesta a la ficha de la misma revisión.
-- Explicar el carácter ilustrativo y permitir retirar la imagen del envío.
+**Resultado:** la carpintería se entera del pedido y la plataforma cobra la comisión.
 
-**Cierre:** la composición puede ajustarse y exportarse; las medidas y cantidades permanecen iguales antes y después del ajuste visual. El usuario distingue los controles del mueble de los del encuadre en una prueba observada.
+- Aviso por WhatsApp vía n8n con el enlace al pedido. Si falla, se reintenta y el pedido igual queda en la bandeja (RF-16).
+- El cliente acepta y paga la seña por Mercado Pago; el pedido pasa a *Aceptado* solo cuando el webhook (con firma verificada) confirma el pago, y se registra la comisión (RF-18, RNF-08).
+- Resumen de trabajos, señas cobradas y comisión (RF-30).
+- Si Maps, n8n o Mercado Pago fallan, el cliente sigue pudiendo diseñar y ver los materiales (RNF-11).
 
-**Evidencia:** comparación antes/después, ficha con imagen y registro de medidas invariables.
+**Si no llegamos con la integración:** cobrar el primer pedido real con un link de pago de Mercado Pago generado a mano. También cuenta como REVENUE con captura (`coherencia_y_decisiones.md`, punto 4).
 
-Si el ajuste manual no resulta comprensible, se simplificarán sus controles y se repetirá la tarea. Si sigue sin funcionar, el hito queda pendiente y se registra una reducción de alcance explícita; no se reemplazará por una imagen generada ajena al modelo presentándola como integración exacta.
+**Cierre:** pasan los criterios de aceptación de RF-16, RF-18 y RF-30.
 
-## 9. H5 — Solicitudes y atención de prueba
+## 10. H5 — Seguridad, deploy y prueba con personas
 
-**Resultado:** registrar un proyecto que realmente pueda revisar el operador o profesional piloto.
+- Revisión de seguridad: BCrypt, solo HTTPS, validación de entradas, OWASP Top 10 y límite de peticiones en el login (RNF-08).
+- Privacidad según Ley 25.326 (RNF-09).
+- Deploy: frontend en Vercel y backend con MySQL en Docker (RNF-13).
+- Prueba con compañeros y posibles clientes (`paso_a_paso.md`). Registrar qué les costó.
 
-Trabajo:
+**Cierre:** la app está online, probada por personas reales, y las métricas de T salen de ese uso.
 
-- Configurar datos y archivos privados, destinatario habilitado y servicio de recepción.
-- Validar y recalcular la captura con el motor compartido.
-- Registrar contacto, autorización, revisión fija y archivos previstos.
-- Finalizar únicamente envíos completos y evitar duplicados mediante clave de reintento.
-- Mostrar ID y confirmación de registro; conservar posibilidad de reintentar ante fallo.
-- Preparar acceso controlado del operador y procedimiento de revisión y respuesta.
+## 11. H6 — Entrega y video
 
-**Cierre:** un envío de prueba queda almacenado con archivos y puede recuperarse por el operador autorizado. Un reintento conserva el mismo ID. Un archivo faltante impide confirmar registro completo. Cambiar el borrador después no altera la captura enviada. La lectura pública de datos privados está impedida.
+- Probar todos los casos de uso importantes.
+- Mostrar en el video las pruebas escritas a partir de los casos de uso.
+- El guion responde los cuatro criterios: utilidad, experiencia de usuario, modelo de negocio (comisión por trabajo concretado, a cargo de la carpintería) y tecnología interesante.
+- Tracción con número y link o captura.
 
-**Evidencia:** registro de prueba, recuperación autorizada, prueba de reintento y limpieza del caso. Los datos de prueba estarán separados de encargos reales.
+---
 
-## 10. H6 — MVP piloto y demostración
+## 12. Qué se entrega el 13/11 (a decidir)
 
-**Resultado:** recorrido integrado utilizable y revisable, con atención profesional acordada.
+**Propuesta:** el mínimo para la entrega es **T + H0 + H1 + H2** desplegado (F1 y F2 funcionando), más lo que se llegue de F3. Lo que no esté terminado se muestra en el video como hoja de ruta, no como hecho.
 
-Trabajo:
+**Orden de recorte propuesto** si no alcanza el tiempo (de lo que menos afecta a lo que más):
 
-- Corregir obstáculos del recorrido y comprobar interfaz en computadora y celular según alcance declarado.
-- Ejecutar la ronda propuesta de cinco clientes y dos carpinteros de DOC-02, o registrar expresamente una muestra diferente y sus límites.
-- Revisar capacidad de creación desde vacío frente a plantilla opcional.
-- Confirmar profesional, zona, responsable y plazo de respuesta antes de admitir solicitudes reales.
-- Definir conservación y eliminación de datos y registrar limitaciones conocidas.
-- Preparar una demo reproducible, archivos de ejemplo e instrucciones de ejecución.
+1. RF-10 costo estimado (ya depende de conseguir precios con fuente).
+2. RF-29 avisos en tiempo real (el pedido aparece al recargar).
+3. RF-30 resumen de trabajos.
+4. RF-18 seña integrada → link de pago manual (ver H4).
+5. RF-14 mapa → listado de carpinterías filtrado por material.
 
-**Cierre técnico:** se completa crear, guardar, visualizar, descargar y registrar un pedido, sin fallos que impidan el recorrido o produzcan resultados contradictorios.
+No se recortan: lista de espera (RF-20), despiece y placas (RF-07, RF-08), plantilla con aviso de medidas y AR (RF-01, RF-02, RF-04) y pedido de presupuesto (RF-15).
 
-**Cierre del piloto:** existe ruta efectiva de atención, se documentaron las pruebas realizadas y se evaluaron los criterios exploratorios de DOC-02. Si no hay usuarios con necesidad real o solicitudes atendidas, la validación comercial seguirá pendiente aunque la demo funcione.
+## 13. Definición de terminado
 
-**Evidencia:** versión y commit identificados, acceso de demostración, PDFs y JSON de ejemplo, resultados de pruebas, instrucciones y lista breve de pendientes.
+Un hito está terminado cuando:
 
-## 11. Prioridades y tratamiento de cambios
+- sus criterios de aceptación de DOC-02A pasan como pruebas automáticas;
+- está desplegado en la versión identificada (commit);
+- la API está documentada en Swagger y el módulo tiene su README (RNF-12);
+- no hay claves en el repositorio (RNF-08);
+- tiene una nota breve: qué funciona, cómo probarlo y qué queda pendiente.
 
-| Prioridad | Funciones |
-| --- | --- |
-| Esenciales para el MVP acordado | Creación modular con paleta mínima, edición y relaciones, modelo 3D, guardado local, JSON editable auxiliar, plano, cómputo preliminar, PDF, implantación manual y solicitud persistente con atención piloto. |
-| Mejoras si no retrasan el recorrido | Arrastre desde la paleta, plantillas adicionales, texturas más trabajadas, atajos y ajustes visuales. |
-| Evoluciones posteriores | Puertas y cajones completos, más familias, IA, corte optimizado, cuentas, comparación de presupuestos, pagos y reseñas. |
+Una captura, un mockup o una prueba sin evidencia no reemplazan una función que anda.
 
-Puertas, cajones y patas presentes en los conceptos visuales no se consideran entregados hasta contar con reglas y controles funcionales. El equipo puede incorporar alguno durante la POC si es sencillo y verificable; ello no obliga a implementar todos.
+## 14. Después del MVP
 
-Si el plazo resulta insuficiente, primero se posponen mejoras visuales y ampliaciones del catálogo. Si es necesario retirar una función esencial, se registra el cambio en DOC-01, DOC-04A/04B y DOC-06. La entrega resultante se identificará por su alcance real, sin declararla equivalente al MVP completo.
+Lo validado por los datos que se hace después está en DOC-02A §4: exportar PDF (RF-11), chatbot con Gemini (RF-22), tutorial inicial (RF-23), catálogo de fotos por carpintería (RF-24), reseñas (RF-25), más plantillas (RF-26) y agenda de visitas (RF-31).
 
-## 12. Dependencias y condiciones externas
+También quedan para después:
+- Optimización real de cortes (más allá del cálculo simple de RF-08).
+- Imagen del mueble en una foto del ambiente generada con Gemini, como mejora ilustrativa (`doc/README.md`, ideas para después del MVP).
 
-| Dependencia | Cuándo resolverla | Efecto si falta |
-| --- | --- | --- |
-| Reglas y materiales iniciales | H0–H1 | Se puede probar geometría provisional; no afirmar validez constructiva. |
-| Versiones compatibles y motor compartido | H0–H1 | Corregir selección antes de construir toda la interfaz. |
-| Profesional y zona piloto | Iniciar H0; confirmar antes de H6 | La demo técnica continúa; no abrir pedidos reales sin atención. |
-| Servicio remoto y alojamiento | Preparar antes de H5 | El editor puede avanzar localmente; solicitud real pendiente. |
-| Imágenes y recursos con permiso | Antes de incorporarlos | Utilizar recursos propios o de prueba autorizados. |
-| Plazo del evento y dedicación del equipo | Antes de calendarizar | Mantener hitos relativos, sin fecha comprometida. |
+## 15. Decisiones pendientes
 
-## 13. Planificación de fechas y responsables
+| # | Tema | Opciones |
+|---|---|---|
+| 1 | Qué se entrega el 13/11 | Propuesta del §12. |
+| 2 | Seña por Mercado Pago | Integración completa (RF-18) o link de pago manual para el primer pedido. |
+| 3 | Costo estimado (RF-10) | Entra solo si hay precios de referencia con fuente; si no, post-MVP. |
+| 4 | Chatbot | `paso_a_paso.md` lo lista como "detalle agregado"; DOC-02A lo deja post-MVP (RF-22). |
+| 5 | Aplicación Android | `paso_a_paso.md` dice "si se llega"; DOC-02A deja fuera la app nativa. |
+| 6 | Cuenta del cliente | RF-05 ("Mis proyectos") implica cuenta; `coherencia_y_decisiones.md` propone que el cliente no necesite cuenta hasta pedir presupuesto. |
 
-Antes de calendarizar se completarán cuatro datos: fecha límite externa, integrantes, dedicación efectiva y disponibilidad del profesional. Cada hito tendrá un responsable principal; las asignaciones siguen pendientes.
-
-Se estimará primero H0–H2 para medir el esfuerzo real del editor. Con ese resultado se revisará el resto, reservando tiempo explícito para integración y correcciones. No se supone que dos personas reduzcan el plazo a la mitad ni que la asistencia de IA elimine la revisión.
-
-DOC-06 conservará la fecha objetivo, el entorno y la lista de aceptación. Este documento conservará el orden, alcance y dependencias. Una fecha no convertirá automáticamente un hito pendiente en terminado.
-
-## 14. Definición común de entrega terminada
-
-Un hito se considera terminado cuando su comportamiento se ejecuta en la versión identificada, se verifica el caso acordado y se registran sus limitaciones. El código deberá compilar y sus cambios pertinentes pasarán las comprobaciones necesarias.
-
-Cada entrega incluirá una nota breve: qué funciona, cómo probarlo, resultado de verificación y pendientes que afectan al siguiente hito. Una captura, un mockup o una declaración de pruebas sin evidencia no sustituyen una función ejecutable.
-
-## 15. Evolución después del MVP
-
-| Evolución | Contenido posible | Evidencia que justifica priorizarla |
-| --- | --- | --- |
-| E1 — Mejor creación | Nuevos módulos, puertas, cajones, patas, mejores encastres y plantillas. | Pedidos repetidos o dificultades observadas con la paleta mínima. |
-| E2 — Mejor documentación | Detalles de uniones, herrajes por sistema, cantos y corte optimizado. | Necesidades concretas de profesionales y reglas constructivas verificadas. |
-| E3 — Mejor visualización | Oclusión, ajuste de perspectiva y asistencia visual con IA. | La implantación mejora decisiones y sus limitaciones frenan el uso. |
-| E4 — Red de carpinterías | Cuentas limitadas por destinatario, presupuestos comparables y seguimiento. | Solicitudes reales y profesionales capaces de responder. |
-| E5 — Confianza y cobro | Reseñas por trabajo, validación del cierre y modalidad de monetización. | Uso recurrente, valor demostrado y proceso comercial definido. |
-| E6 — Otros oficios | Nuevos tipos de proyecto y documentación especializada. | Carpintería validada y necesidad específica que justifique otro flujo. |
-
-Estas evoluciones no son una secuencia obligatoria. Se priorizarán según utilidad, esfuerzo y evidencia. Ninguna tiene fecha o presupuesto aprobado en esta versión.
-
-## 16. Próxima acción
-
-Completar **DOC-06 — POC, fecha y condiciones de entrega**: fijar los casos, el entorno de prueba, los límites propuestos y los criterios de aprobación antes de comenzar la implementación. La fecha quedará pendiente hasta disponer de los datos del calendario.
-
-Después de esa definición, la primera tarea de construcción será H0: base del proyecto y dos casos de referencia. No corresponde comenzar por el marketplace ni por un editor con todos los módulos de las imágenes.
-
-## 17. Historial
+## Historial
 
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
-| 0.1 | 04/11/2026 | Hitos del núcleo, recorrido y MVP piloto; dependencias, evidencias y evoluciones posteriores. |
-| 0.2 | 12/11/2026 | Se registra la fecha límite y se marca para revisión conjunta del equipo. Sin cambios en los hitos. |
+| 0.1 | 04/11/2026 | Hitos del núcleo, recorrido y MVP piloto sobre el editor modular. |
+| 0.2 | 12/11/2026 | Se registra la fecha límite y se marca para revisión conjunta. Sin cambios en los hitos. |
+| 0.3 | 13/11/2026 | Reescrito sobre DOC-02A y DOC-02B: hitos por funcionalidad (F1, F2, F3), tracción en paralelo, casos de prueba, propuesta para la entrega del 13/11 y orden de recorte. Se quita el alcance del borrador del 4/11 que no coincidía con lo definido por el equipo. |
