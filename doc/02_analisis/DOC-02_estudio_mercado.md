@@ -1,219 +1,231 @@
 # Estudio de mercado y validación de la propuesta
-## Plataforma web para diseñar y cotizar muebles a medida
+## Viruta – plataforma web para diseñar, visualizar y encargar muebles a medida
 
-**Código:** DOC-02  
-**Versión:** 0.3  
-**Fecha de consulta:** 4 de noviembre de 2026  
-**Estado:** Investigación exploratoria. Trabajo de campo inicial realizado: encuesta a 31 clientes, encuesta a 4 carpinterías y 2 testimonios (`encuestas/`, `testimonios/`; resultados consolidados en DOC-02A §2). Entrevistas y pruebas de uso pendientes.  
-**Alineación (12/11/2026):** hay puntos de alcance que difieren de lo ya definido por el equipo. Ver `doc/coherencia_y_decisiones.md`.  
-**Documento base:** DOC-01 — Informe descriptivo V0.2.
+**Código:** DOC-02
+**Versión:** 0.4
+**Fecha:** 13 de noviembre de 2026 (fuentes consultadas el 4/11/2026)
+**Estado:** Investigación exploratoria. Trabajo de campo inicial realizado: encuesta a 31 clientes, encuesta a 4 carpinterías y 2 testimonios. Pruebas de uso pendientes.
+**Bases:** DOC-01 V0.4, `02_analisis/encuestas/`, `02_analisis/testimonios/`.
+
+---
 
 ## 1. Objetivo
 
-Identificar alternativas existentes, formular una diferenciación defendible y definir cómo comprobar si clientes y carpinteros necesitan el recorrido propuesto: crear un mueble con una paleta modular, visualizarlo en su ambiente, descargar una ficha preliminar y solicitar presupuesto.
+Identificar las alternativas que ya existen, definir en qué se diferencia Viruta y establecer cómo comprobar que clientes y carpinterías necesitan el recorrido propuesto: armar un mueble desde una plantilla, verlo en su espacio con AR, saber qué comprar y encargarlo a una carpintería de la zona.
 
-Este estudio sirve para orientar el MVP. No demuestra todavía viabilidad comercial, demanda suficiente ni disposición de pago.
+Este estudio orienta el MVP. Las encuestas muestran que el problema existe; todavía no demuestran demanda suficiente ni disposición a pagar.
 
 ## 2. Método y límites
 
-Se revisaron páginas públicas de los propios proveedores, consultadas en la fecha indicada. Las funciones se describen según lo publicado por cada empresa: no se ejecutaron pruebas completas, compras ni verificaciones independientes de calidad o exactitud.
+**Investigación documental:** se revisaron páginas públicas de los proveedores, consultadas el 4/11/2026. Las funciones se describen según lo que publica cada empresa; no se probaron ni se verificaron de forma independiente.
+
+**Trabajo de campo:**
+- Encuesta a 31 potenciales clientes.
+- Encuesta a 4 carpinterías.
+- 2 testimonios de carpinteros.
 
 Se distinguen tres tipos de contenido:
 
-- **Observación documental:** función o proceso descrito por una fuente identificada.
-- **Inferencia del proyecto:** interpretación de esas observaciones para orientar decisiones.
-- **Hipótesis:** afirmación pendiente de entrevistas, experimentos o resultados reales.
+- **Observación:** algo que dice una fuente o que respondieron las personas encuestadas.
+- **Inferencia:** interpretación del equipo para tomar decisiones.
+- **Hipótesis:** afirmación que todavía hay que comprobar.
 
-La comparación es selectiva, no un relevamiento exhaustivo. Los referentes internacionales aportan patrones de producto; no se asume que operen en Argentina. Tampoco se presume cobertura efectiva de plataformas locales en la futura localidad piloto. No se investigaron participaciones de mercado ni volúmenes de usuarios o ventas.
+Las muestras son chicas y no representativas: sirven para orientar, no para estimar el mercado. La comparación de alternativas es selectiva, no exhaustiva.
 
-## 3. Mercado inicial propuesto
+## 3. Mercado inicial
 
-**Hipótesis de segmento:** personas que necesitan crear o adaptar un mueble sencillo a medida para su hogar o espacio de trabajo, con restricciones de espacio o distribución. El segmento es una propuesta de prueba, no una conclusión estadística.
+**Segmento principal:** vecinos de Jujuy que quieren un mueble a medida simple (estantes, mesas, bajo mesadas) en madera, melamina o aglomerado.
 
-**Oferta inicial:** una o dos carpinterías que fabriquen muebles de placas y estén dispuestas a revisar solicitudes. Antes del lanzamiento debe confirmarse capacidad, zona de atención y condiciones de respuesta.
+**Oferta:** carpinterías independientes de la zona que trabajan muebles de placas. Las que respondieron la encuesta son las primeras candidatas para sumarse.
 
-**Geografía:** Jujuy (San Salvador de Jujuy y alrededores), donde el equipo ya obtuvo respuestas de clientes y de carpinterías. Es requisito de participación del hackatón.
+**Geografía:** San Salvador de Jujuy y alrededores. Es requisito del hackatón y es donde el equipo tiene las respuestas.
 
-| Segmento | Necesidad a comprobar | Prioridad propuesta |
+| Segmento | Necesidad | Prioridad |
 | --- | --- | --- |
-| Personas con necesidad actual o reciente de un mueble sencillo a medida | Comunicar dimensiones y apariencia, y encontrar quién lo fabrique. | Principal para el piloto. |
-| Carpinterías pequeñas de muebles de placas | Recibir pedidos mejor definidos sin aumentar el trabajo de revisión. | Socio indispensable. |
-| Personas que fabrican por cuenta propia | Obtener piezas y cortes para construir. | Secundario; necesidad distinta del servicio de contratación. |
-| Otros oficios y muebles complejos | Resolver proyectos con otras reglas y profesionales. | Fuera de la validación inicial. |
+| Personas que necesitan un mueble simple a medida | Que entre en el espacio, saber qué comprar y encontrar quién lo haga. | Principal. |
+| Carpinterías independientes de muebles de placas | Recibir pedidos con medidas y material definidos. | Socio indispensable: es quien paga. |
+| Personas que fabrican por su cuenta | Saber qué piezas cortar y qué comprar. | Secundario: lo cubre la lista de materiales. |
+| Otros oficios y muebles complejos | Otros profesionales y otras reglas. | Fuera de esta etapa. |
 
 ## 4. Alternativas identificadas
 
-| Alternativa | Funciones publicadas y fuente | Relación con la propuesta |
+| Alternativa | Funciones publicadas y fuente | Relación con Viruta |
 | --- | --- | --- |
-| Armandolo | Configuración de muebles de melamina, representación 3D, piezas, herrajes y corte por plancha; incluye escritorios. [F1–F2] | Solapamiento directo con la configuración y el despiece. Obliga a diferenciar más allá de generar piezas. |
-| Tylko | Configurador para modificar dimensiones, colores y otras opciones del mobiliario en tiempo real. [F3] | Referente de experiencia de personalización y venta de muebles. |
-| Pickawood | Configuradores de mobiliario a medida, con categorías que incluyen mesas y escritorios. [F4] | Referente de configuración ligada a la oferta de un fabricante/proveedor. |
-| IKEA Kreativ | Visualización de productos IKEA en el espacio del usuario mediante foto y herramientas de planificación. [F5] | Referente de visualización contextual, ligado a su catálogo. |
-| Servidos | Publicación de trabajos, ofertas, chat, perfiles y reseñas; el sitio presenta servicios de carpintería en Argentina. [F6–F7] | Solapamiento con conexión entre clientes y profesionales. No se comprobó actividad en la zona piloto. |
-| Habitissimo | Su ayuda en español describe solicitudes de presupuesto, contacto con profesionales y opiniones posteriores. [F8] | Referente de intermediación. La fuente consultada corresponde a España y tiene actualización de 2019; no acredita operación argentina actual. |
-| Contacto directo por WhatsApp, recomendación o redes | Alternativa de referencia para las entrevistas; su frecuencia y eficacia no fueron medidas. | Debemos comprobar si nuestra ficha mejora un proceso que el cliente ya puede realizar directamente. |
+| Armandolo | Configuración de muebles de melamina, representación 3D, piezas, herrajes y corte por plancha; incluye escritorios. [F1–F2] | Competencia directa en configuración y despiece. Viruta se diferencia por la AR y la conexión con carpinterías locales. |
+| Tylko | Configurador para modificar dimensiones, colores y otras opciones en tiempo real. [F3] | Referente de experiencia de personalización. |
+| Pickawood | Configuradores de muebles a medida, incluidas mesas y escritorios. [F4] | Referente de configuración ligada a un fabricante. |
+| IKEA Kreativ | Visualización de productos IKEA en el espacio del usuario. [F5] | Referente de visualización, atado a su catálogo. |
+| Servidos | Publicación de trabajos, ofertas, chat, perfiles y reseñas; incluye carpintería en Argentina. [F6–F7] | Competencia en la conexión entre clientes y profesionales. No se comprobó actividad en Jujuy. |
+| Habitissimo | Solicitudes de presupuesto, contacto con profesionales y opiniones. [F8] | Referente de intermediación. La fuente es de España (2019). |
+| WhatsApp, recomendaciones y redes | Es como se contrata hoy: el 100% de las carpinterías quiere recibir los pedidos por WhatsApp. | La alternativa real. Viruta tiene que mejorar ese proceso, no reemplazarlo: por eso el aviso llega por WhatsApp. |
 
-La ausencia de una función en las páginas consultadas no prueba que el proveedor no la tenga. Para cada competidor quedan pendientes la prueba de uso, las condiciones comerciales y la cobertura pertinente.
+Que una función no aparezca en las páginas consultadas no prueba que el proveedor no la tenga.
 
-## 5. Hallazgos y consecuencias para el MVP
+## 5. Resultados del trabajo de campo
 
-**Observación:** ya existen herramientas que resuelven configuración y despiece, y otras que conectan clientes con profesionales. Las fuentes F1–F8 respaldan estos antecedentes.
+El detalle está en DOC-02A §2. Lo principal:
 
-**Inferencia:** presentar la idea únicamente como un generador de planos o una plataforma de oficios no establece una diferencia suficiente. La oportunidad a investigar es unir esas capacidades con un editor modular fácil de usar para una persona sin conocimientos técnicos. Que el usuario pueda crear su composición es una decisión de producto, no una demanda comprobada.
+**Clientes (n = 31):**
+- 71% compra muebles estándar; solo 13% contrata a un carpintero.
+- **58%** se frustra porque calcula mal las medidas y el mueble no entra.
+- 48% no logra imaginar color y estilo; 32% no sabe cuánto material comprar.
+- La realidad aumentada tiene una utilidad promedio de **4,58 sobre 5**.
+- Funciones que más usarían: diseño 3D (81%), cálculo de materiales (58%), conexión con carpinteros (45%).
+- **81%** usa Android.
+- Disposición a pagar: 48% pago único, 39% solo gratis, 19% suscripción.
+- Cotizar materiales con proveedores locales: importancia **8,74 sobre 10**.
+- Encontrar planos o guías: **2,55 sobre 5** (90% dice que le cuesta).
 
-**Hipótesis de diferenciación:** el cliente puede crear su propio mueble con elementos de una paleta, entender cómo quedará en su ambiente y enviar una ficha coherente que un carpintero local pueda revisar y adaptar para cotizar.
+**Carpinterías (n = 4 + 2 testimonios):**
+- **100%** quiere el aviso por WhatsApp; 0% por correo.
+- **100%** necesita medidas y tipo de madera para cotizar.
+- Testimonio 1: los clientes miden mal y ella siempre vuelve a medir; cobra 50% de seña; muchos clientes compran el material y pagan solo la mano de obra; propone un catálogo de fotos por carpintero y una guía de cómo medir.
+- Testimonio 2: quiere cargar las piezas y el tamaño de placa y que la aplicación diga cuántas placas usar.
 
-No se afirma que esta combinación sea única ni que garantice demanda. La facilidad de uso, la utilidad profesional y la respuesta efectiva del carpintero serán más relevantes que la cantidad de funciones.
+## 6. Hallazgos y consecuencias para el MVP
 
-## 6. Posicionamiento propuesto
+**Observación:** ya existen herramientas de configuración y despiece, y otras que conectan clientes con profesionales.
 
-**“Creá tu mueble, visualizalo en tu espacio y compartí una ficha de referencia para pedir presupuesto.”**
+**Inferencia:** presentar Viruta solo como un configurador o solo como una plataforma de oficios no alcanza para diferenciarse. La oportunidad es unir las dos cosas para una zona concreta: que el cliente diseñe algo que entre, lo vea en su casa y la carpintería reciba exactamente eso.
 
-El cliente conserva la decisión y el carpintero conserva la revisión constructiva y comercial. El plano y los materiales son preliminares; la imagen del ambiente no constituye una medición.
+**Consecuencias en el MVP (DOC-02A):**
 
-El MVP se actualiza a un editor modular acotado para muebles sencillos de tableros rectangulares. Los escritorios son un ejemplo, junto con estantes y muebles bajos. La POC deberá comprobar al menos dos tipologías utilizando el mismo sistema de elementos y relaciones. No se propone competir inicialmente en amplitud de catálogo, optimización industrial de cortes, pagos o red nacional de profesionales.
+| Dato | Decisión |
+|---|---|
+| 58% mide mal; los carpinteros vuelven a medir | Medidas del espacio con aviso (RF-02), guía de cómo medir (RF-06) y estado *Medidas verificadas* (RF-19). |
+| AR 4,58/5; 81% usaría diseño 3D | Plantillas en 3D (RF-01) y realidad aumentada (RF-04). |
+| 32% no sabe qué comprar; testimonio 2 | Despiece, placas, herrajes y barniz (RF-07 a RF-09). |
+| 100% de carpinterías pide medidas y madera por WhatsApp | Pedido con todos los datos (RF-15) y aviso por WhatsApp (RF-16). |
+| 81% Android | Mobile first, Android primero (RNF-05). |
+| 19% pagaría suscripción; seña del 50% ya es práctica | Comisión a la carpintería descontada de la seña (RF-18). |
 
-## 7. Hipótesis críticas
+## 7. Posicionamiento
 
-| Código | Hipótesis | Evidencia buscada |
+**"Diseñá tu mueble, probalo en tu espacio, sabé qué comprar y encargalo a una carpintería de tu zona."**
+
+El cliente decide el diseño; la carpintería verifica las medidas y define el presupuesto. Las cantidades de materiales son estimadas y la AR no reemplaza una medición.
+
+No se propone competir en amplitud de catálogo ni en optimización industrial de cortes, ni abrir una red nacional de profesionales en esta etapa.
+
+## 8. Hipótesis críticas
+
+| Código | Hipótesis | Evidencia hasta ahora | Evidencia que falta |
+| --- | --- | --- | --- |
+| H1 | El cliente tiene dificultades para medir y comunicar su pedido. | 58% mide mal; testimonio 1. | — |
+| H2 | Con la guía y los avisos, el cliente carga medidas útiles. | — | Prueba de uso observada. |
+| H3 | Ver el mueble en AR ayuda a decidir. | AR 4,58/5 en encuesta. | Uso real: qué decide el cliente al verlo. |
+| H4 | El pedido de Viruta le alcanza a la carpintería para presupuestar. | 100% pide medidas y madera. | Revisión de un pedido real con carpinterías. |
+| H5 | Hay clientes que piden presupuesto de verdad. | — | Pedidos reales registrados. |
+| H6 | Las carpinterías responden los pedidos. | — | Presupuestos respondidos en el panel. |
+| H7 | La carpintería acepta pagar la comisión. | Solo 19% de clientes pagaría suscripción; la seña ya es práctica. | Preguntarlo a las carpinterías y cobrar la primera seña. |
+| H8 | Una persona sin experiencia arma su mueble y lo ve en AR en menos de 5 minutos. | — | Prueba de uso (RNF-02). |
+
+## 9. Prueba de uso
+
+Una primera ronda con **5 clientes** y **2 carpinteros**. Pueden participar personas que respondieron la encuesta, dejando constancia de que ya conocen la idea.
+
+**Tarea del cliente:** con un espacio real de su casa, elegir una plantilla, medir con la guía, cargar las medidas del espacio, ajustar el mueble hasta que entre, verlo en AR y revisar la lista de materiales. Si tiene una necesidad real, ofrecerle pedir presupuesto; no pedir encargos ficticios. Registrar tiempo, ayuda que necesitó y errores.
+
+**Tarea del carpintero:** comparar un pedido como los que recibe hoy por WhatsApp (texto y foto) con el pedido de Viruta para el mismo mueble. Alternar el orden entre participantes. Registrar qué información falta, qué tendría que preguntar y si puede presupuestar. Preguntar si aceptaría la comisión.
+
+Los casos de demostración se identifican como tales. Pedidos, presupuestos, señas y trabajos terminados se registran como eventos distintos.
+
+## 10. Métricas y reglas de decisión
+
+**Prueba de uso:**
+
+| Indicador | Cómo medirlo | Umbral propuesto |
 | --- | --- | --- |
-| H1 | El cliente tiene dificultades concretas para definir o comunicar el pedido. | Relatos de encargos reales, aclaraciones y cambios recientes. |
-| H2 | Puede ingresar las medidas mínimas con una guía breve. | Ejercicio observado y registro de errores o dudas. |
-| H3 | La vista en el ambiente aporta una decisión útil. | Comparación con la ficha sin implantación y explicación del cambio realizado. |
-| H4 | La ficha ayuda al carpintero a iniciar la cotización. | Revisión de un caso y comparación con un pedido de texto y foto. |
-| H5 | Hay intención de solicitar un presupuesto real. | Solicitud voluntaria y consentimiento para compartirla con un profesional identificado. |
-| H6 | El profesional acepta revisar pedidos y responder. | Compromiso operativo y atención de una solicitud real. |
-| H7 | Alguna parte pagaría por el servicio. | Prueba posterior de una oferta concreta; una respuesta favorable en entrevista no basta. |
-| H8 | Un usuario sin formación puede crear su composición con una paleta acotada. | Tarea desde un espacio vacío: agregar, dimensionar, ubicar y modificar elementos sin que opere el facilitador. |
-| H9 | La libertad de creación aporta valor frente a adaptar una plantilla. | Comparar ambas tareas, registrar preferencia razonada, errores y resultado, sin asumir que más libertad es mejor. |
-| H10 | La paleta permite diseños suficientemente claros para revisión profesional. | Evaluar dos tipologías, relaciones, interferencias y datos faltantes con los carpinteros. |
+| Finalización | Clientes que llegan de la plantilla a la lista de materiales sin que el facilitador opere por ellos. | Al menos 4 de 5. |
+| Tiempo | Minutos hasta ver el primer mueble en AR. | Al menos 4 de 5 en menos de 5 minutos (RNF-02). |
+| Medidas | Clientes que cargan bien la profundidad adelante y atrás con la guía. | Al menos 4 de 5. |
+| Aporte de la AR | Decisión concreta que cambia o se confirma al ver el mueble en el espacio. | Al menos 3 de 5. |
+| Utilidad para la carpintería | Puede presupuestar con el pedido de Viruta sin pedir datos por fuera. | Los 2 carpinteros. |
+| Oferta disponible | Una carpintería responde un pedido real desde el panel. | Al menos 1. |
 
-## 8. Investigación con personas
+**Tracción (lo que más pesa en el hackatón):**
 
-### 8.1 Muestra exploratoria propuesta
+| Indicador | Fuente |
+| --- | --- |
+| Inscriptos en la lista de espera (clientes y carpinterías) | Contador real (RF-20). |
+| Usuarios y diseños creados | Panel interno (RF-21). |
+| Pedidos y presupuestos | Panel interno (RF-21). |
+| Señas cobradas | Mercado Pago (RF-18, RF-30). |
 
-Entrevistar a **8 potenciales clientes** con una compra reciente o necesidad actual de mueble sencillo a medida y a **4 carpinteros** con experiencia en muebles de placas. Estas cantidades son metas operativas iniciales, no una muestra representativa.
+Cada número se presenta con link o captura. Los umbrales son propuestos por el equipo, no estándares del sector.
 
-Incluir personas ajenas al círculo cercano y participantes con distinta experiencia digital. Registrar cómo se reclutó a cada participante. No convertir las respuestas de amigos o contactos voluntarios en porcentajes del mercado.
-
-No se enviarán mensajes ni se contactará a participantes desde este documento; el reclutamiento y las entrevistas están pendientes.
-
-### 8.2 Guion para clientes
-
-1. Contame la última vez que buscaste o encargaste un mueble a medida.
-2. ¿Cómo encontraste al profesional y qué le enviaste inicialmente?
-3. ¿Qué tuviste que medir y qué dudas aparecieron?
-4. ¿Cuántas aclaraciones o modificaciones necesitaste antes de recibir una propuesta?
-5. ¿Cómo imaginaste si el mueble quedaría bien en tu ambiente?
-6. ¿Qué te hizo aceptar, postergar o abandonar el pedido?
-7. ¿Qué información te faltó para decidir?
-8. ¿Qué partes de ese mueble necesitabas cambiar o combinar y cómo lo explicaste?
-
-Después del relato, mostrar el concepto y pedir que explique qué entiende. Evitar empezar con “¿usarías esta app?” o presentar la solución antes de conocer la experiencia.
-
-### 8.3 Guion para carpinteros
-
-1. ¿Cómo llegan los pedidos y qué información suele faltar?
-2. ¿Qué necesitás para emitir una estimación y qué exige una visita?
-3. ¿Cómo definís medidas, uniones, material y herrajes?
-4. ¿Qué problemas te generaría recibir un plano hecho por una aplicación?
-5. Revisando esta ficha, ¿qué podés cotizar y qué tendrías que corregir?
-6. ¿Aceptarías una prueba con una solicitud real? ¿En qué zona y plazo podrías responder?
-7. ¿Cómo evaluás hoy si vale la pena atender una consulta?
-
-Hablar de cobros después de entender el flujo actual y el valor aportado. No interpretar disposición a probar como compromiso de pago.
-
-## 9. Experimento de uso
-
-Realizar una primera ronda con **5 clientes** y **2 carpinteros**; pueden participar entrevistados anteriores, dejando constancia de que ya conocen la idea.
-
-**Tarea del cliente:** con una foto y medidas disponibles, crear un mueble sencillo desde un espacio vacío usando la paleta: agregar tableros, laterales y estantes, cambiar dimensiones, duplicar o eliminar un elemento y resolver su colocación. Revisar la implantación, interpretar el plano y descargar la ficha. Incluir un segundo ejercicio con plantilla opcional y alternar el orden entre participantes. Registrar tiempo, asistencia y errores de cada modo. Distribuir los casos entre al menos dos tipologías, por ejemplo estante y escritorio o mueble bajo. Las tipologías son tareas de prueba, no un catálogo exclusivo. Si existe una necesidad genuina, ofrecer registrar la solicitud; no pedir un encargo ficticio para aumentar conversiones.
-
-**Tarea del carpintero:** comparar un pedido breve con foto frente a la ficha del mismo caso. Alternar el orden entre participantes para reducir el efecto de presentación. Registrar información faltante, aclaraciones necesarias y posibilidad de cotizar de manera preliminar.
-
-Los casos de demostración se identificarán como tales. Solicitudes, respuestas, contrataciones y trabajos terminados se registrarán como eventos diferentes.
-
-## 10. Métricas y reglas de decisión propuestas
-
-| Indicador | Cómo medirlo | Umbral exploratorio propuesto |
-| --- | --- | --- |
-| Finalización | Personas que completan creación modular y descarga / personas que inician la tarea. Registrar por separado resultados desde vacío y desde plantilla. | Al menos 4 de 5, sin que el facilitador opere por ellas. |
-| Edición modular | Capacidad de agregar, dimensionar y reubicar un elemento; duplicar o eliminar otro. | Al menos 4 de 5 completan estas acciones sin operación del facilitador; registrar errores y asistencia verbal. |
-| Comprensión | Explicación de dimensiones y carácter preliminar de la ficha. | Al menos 4 de 5 interpretan ambos correctamente. |
-| Aporte de la implantación | Decisión concreta que cambia o se confirma al ver el ambiente. | Al menos 3 de 5 describen un aporte concreto; si no, revisar su prioridad. |
-| Utilidad profesional | Revisión del caso por los carpinteros. | Ambos pueden iniciar una estimación e identifican solo aclaraciones abordables. |
-| Oferta disponible | Compromiso y prueba de atención. | Al menos un carpintero acepta y atiende una solicitud real bajo un plazo acordado. |
-
-Estos umbrales son criterios propuestos del equipo; deberán fijarse antes de la prueba y no se presentan como estándares del sector. Las muestras son demasiado pequeñas para estimar tasas comerciales.
-
-Si no hay participantes con necesidad real, el interés comercial queda sin evaluar aunque el prototipo pase la prueba de uso. Si el carpintero debe rehacer toda la información, revisar la ficha y las reglas antes de ampliar el sistema. Si el flujo resulta útil sin la vista del ambiente, simplificar o posponer esa función.
+Si la prueba de uso sale bien pero no hay pedidos reales, la demanda queda sin comprobar. Si la carpintería tiene que pedir todo de nuevo, se revisa el contenido del pedido antes de sumar funciones.
 
 ## 11. Dimensión de mercado
 
-No se dispone todavía de datos suficientes para calcular TAM, SAM o SOM de manera defendible. No se incluyen cifras generales de construcción como sustituto del mercado de muebles sencillos a medida.
+No hay datos suficientes para calcular el tamaño del mercado de forma defendible. Para el arranque se usa la capacidad real:
 
-Para el piloto, utilizar una estimación desde la capacidad real:
+**Capacidad mensual = carpinterías activas × pedidos que cada una acepta revisar por mes.**
 
-**Capacidad mensual de atención = carpinterías activas × solicitudes que cada una acepta revisar por mes.**
+El volumen posible es el menor entre los pedidos que genera la aplicación y la capacidad de las carpinterías. Cualquier proyección se presenta como escenario, no como venta confirmada.
 
-El volumen comercial posible estará limitado por el menor de dos valores: pedidos calificados generados y capacidad profesional de atenderlos. Las contrataciones dependerán además de precios, respuesta y aceptación del cliente.
+## 12. Modelo de negocio
 
-Los valores se completarán con entrevistas y registros del piloto. Una proyección basada en supuestos deberá rotularse como escenario, nunca como ventas previstas confirmadas.
+Alternativas evaluadas:
 
-## 12. Modelo de negocio: alternativas a probar
+| Alternativa | Por qué no se eligió |
+| --- | --- |
+| Suscripción para carpinterías | Requiere un uso frecuente que todavía no está demostrado. |
+| Cobro por pedido recibido | Obliga a definir qué es un pedido válido y cómo tratar los que no se responden. |
+| Cobro al cliente por diseño o plano | Solo 19% pagaría suscripción y 39% solo usaría la versión gratis. |
+| **Comisión por trabajo concretado** | **Elegida.** |
 
-| Alternativa | Posible beneficio | Pregunta pendiente |
-| --- | --- | --- |
-| Suscripción para carpinterías | Ingreso recurrente por herramienta y gestión. | ¿Existe uso suficientemente frecuente y valor medible? |
-| Cobro por solicitud calificada | Cobro asociado a una oportunidad. | ¿Qué define un pedido válido y cómo se manejan duplicados o consultas sin respuesta? |
-| Comisión por contratación | Ingreso vinculado al trabajo cerrado. | ¿Cómo confirmar el cierre y evitar que el seguimiento resulte costoso? |
-| Cobro por ficha o servicio de diseño | Valor directo al cliente por documentación. | ¿Pagará antes de tener un presupuesto y qué espera recibir? |
+**Decisión del equipo (12/11/2026):** comisión del **8% al 12%** sobre el trabajo concretado, a cargo de la carpintería, descontada de la seña que el cliente paga por Mercado Pago.
 
-**Decisión del equipo (12/11/2026):** se adopta la **comisión por trabajo concretado** (8% a 12%, a cargo de la carpintería). Lo respaldan los datos: solo el 19% de los clientes pagaría una suscripción. Queda pendiente decidir si la seña por Mercado Pago entra en el MVP. No se fija precio final en esta versión. Para el piloto se propone acceso sin cobro, con alcance y duración definidos. Su conversión no demostraría disposición a pagar.
+- **Por qué paga la carpintería:** recibe un cliente que ya trae diseño, medidas y material definidos.
+- **Cómo se confirma el cierre:** el trabajo se considera concretado cuando el cliente paga la seña dentro de la aplicación.
 
-## 13. Captación y operación inicial
+Pendiente: confirmar con las carpinterías que aceptan la comisión y definir su base cuando el cliente compra el material por su cuenta (testimonio 1).
 
-Probar primero una sola zona con acceso a un profesional dispuesto a colaborar. Reclutar clientes con necesidad real mediante contactos autorizados, comunidades locales y la carpintería participante. No invertir en publicidad hasta disponer de una ruta de atención y una forma de medir solicitudes calificadas.
+## 13. Captación inicial
 
-La cantidad de visitas y comentarios puede registrarse para el hackathon, pero no sustituye las métricas de tarea completada, presupuesto solicitado y respuesta profesional. Las reglas y la fecha del evento siguen pendientes de confirmación.
+- **Carpinterías:** empezar por las que respondieron la encuesta y los testimonios.
+- **Clientes:** lista de espera con contador visible, contactos del equipo, comunidades locales y clientes de las carpinterías participantes.
+- No invertir en publicidad hasta tener carpinterías que respondan pedidos.
+
+Para el hackatón, la tracción se mide con números reales: inscriptos, usuarios, pedidos y señas, siempre con link o captura.
 
 ## 14. Riesgos y respuestas
 
-| Riesgo | Respuesta propuesta |
+| Riesgo | Respuesta |
 | --- | --- |
-| Alternativas existentes cubren la necesidad suficientemente. | Comparar el recorrido y comprobar qué mejora concreta aporta el piloto. |
-| Crear con módulos resulta más difícil que explicar el pedido al carpintero. | Comparar espacio vacío y plantilla opcional, simplificar la paleta y observar tareas sin asistencia. |
-| La libertad de edición permite composiciones incoherentes. | Introducir referencias de colocación, reglas por elemento y avisos; revisar con el profesional. |
-| La imagen crea expectativas de precisión. | Separar visualización de dimensiones verificadas y evaluar comprensión. |
-| La ficha interfiere con el método del carpintero. | Codiseñar el contenido y mantener revisión profesional. |
-| Llegan solicitudes sin capacidad de respuesta. | Limitar zona y volumen según disponibilidad acordada. |
-| El uso gratuito se confunde con demanda comercial. | Separar usabilidad, intención real, contratación y pago. |
-| Se comparten fotos o contactos sin claridad. | Identificar al destinatario y obtener autorización para compartir el pedido. |
+| Las alternativas existentes ya resuelven el problema. | Mostrar la diferencia concreta: el pedido llega con medidas, material y despiece, y la AR evita que el mueble no entre. |
+| La carpintería cierra el trabajo por fuera para no pagar la comisión. | Cobrar la seña dentro de la aplicación; es lo que ata la comisión al cierre. |
+| Las carpinterías no aceptan la comisión. | Preguntarlo antes del pitch y ajustar el porcentaje dentro del rango. |
+| La AR genera expectativa de precisión. | Avisar que no es una medición y que la carpintería verifica las medidas en el lugar. |
+| El cliente sigue midiendo mal. | Guía de cómo medir, avisos de inconsistencia y verificación de la carpintería. |
+| Llegan pedidos sin carpinterías que respondan. | Empezar en una zona chica y limitar el volumen a la capacidad acordada. |
+| Se confunde interés con demanda. | Separar inscriptos, diseños, pedidos y señas. |
+| Se comparten datos personales sin claridad. | Pedir datos recién al pedir presupuesto, con consentimiento (RNF-09). |
 
-## 15. Conclusión provisional y próximo paso
+## 15. Conclusión provisional
 
-La investigación documental confirma antecedentes en configuración, visualización e intermediación; no acredita una necesidad local desatendida. La diferenciación propuesta es facilitar el paso desde el espacio del cliente hasta un pedido que un carpintero pueda revisar.
+Las encuestas confirman el problema: los clientes miden mal y no saben qué comprar, y las carpinterías necesitan medidas y material para cotizar. Las alternativas documentadas resuelven partes por separado.
 
-Se adopta el alcance modular de DOC-01 V0.2 y se priorizan entrevistas, pruebas de creación y revisión de la ficha con profesionales. Este cambio responde a la definición del producto por el equipo; no se presenta como un resultado de mercado. Antes de ampliar la paleta o desarrollar una plataforma de oficios, necesitamos evidencia de facilidad de creación, utilidad y capacidad de respuesta.
+La diferenciación de Viruta es unir diseño, AR, cálculo de materiales y conexión con carpinterías locales en un solo recorrido. Lo que falta comprobar es que haya pedidos reales, que las carpinterías los respondan y que acepten la comisión.
 
-El siguiente documento será **03 — Modelos visuales y recorrido del usuario**, identificando las pantallas como prototipos sujetos a los resultados de validación. Este estudio se actualizará con entrevistas y pruebas; no deberá marcarse como validado sin esos registros.
+## 16. Registro del trabajo de campo
 
-## 16. Registro para trabajo de campo
-
-| Registro | Estado al emitir V0.2 |
+| Registro | Estado |
 | --- | --- |
-| Entrevistas de clientes | Pendientes; 0 realizadas en este estudio. |
-| Entrevistas de carpinteros | Pendientes; 0 realizadas en este estudio. |
-| Pruebas observadas | Pendientes. |
-| Solicitudes y presupuestos reales | Sin datos aportados. |
-| Localidad y carpintería piloto | Pendientes de definición. |
-| Responsables y fechas de ejecución | Pendientes de asignación por el equipo. |
+| Encuesta a clientes | 31 respuestas (`encuestas/encuesta_clientes.csv`). |
+| Encuesta a carpinterías | 4 respuestas (`encuestas/encuesta_carpinterias.csv`). |
+| Testimonios | 2 (`testimonios/`). |
+| Prueba de uso | Pendiente. |
+| Pedidos y presupuestos reales | Pendientes. |
+| Zona | Jujuy. |
+| Carpinterías participantes | Candidatas: las que respondieron la encuesta. A confirmar. |
 
-Para cada entrevista registrar código anónimo, fecha, perfil, experiencia reciente, hallazgos, evidencia y decisión asociada. Para cada prueba registrar tarea, asistencia, resultado y obstáculos. No publicar datos de contacto en el informe.
+En el repositorio no se publican datos de contacto. Cada prueba registra tarea, ayuda recibida, resultado y obstáculos.
 
 ## 17. Fuentes
 
-Fuentes consultadas el 04/11/2026. Las descripciones comerciales pertenecen a sus respectivos proveedores y pueden cambiar.
+Consultadas el 04/11/2026. Las descripciones pertenecen a cada proveedor y pueden cambiar.
 
 - **F1. Armandolo — página principal:** https://www.armandolo.com/
 - **F2. Armandolo — configurador de escritorio:** https://www.armandolo.com/configurador?modulo=escritorio
@@ -228,7 +240,7 @@ Fuentes consultadas el 04/11/2026. Las descripciones comerciales pertenecen a su
 
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
-| 0.1 | 04/11/2026 | Investigación documental inicial, comparación de alternativas y protocolo propuesto de validación. Sin trabajo de campo ejecutado. |
-
-| 0.2 | 04/11/2026 | Adecuación al editor modular de muebles; nuevos segmentos, hipótesis y tareas de creación. Se conservan fuentes y pendientes; no se realizaron nuevas entrevistas ni investigación externa para esta revisión. |
-| 0.3 | 12/11/2026 | Registro del trabajo de campo realizado, zona Jujuy y modelo de comisión elegido por el equipo. |
+| 0.1 | 04/11/2026 | Investigación documental inicial, comparación de alternativas y protocolo de validación. |
+| 0.2 | 04/11/2026 | Adecuación al editor modular. |
+| 0.3 | 12/11/2026 | Registro del trabajo de campo, zona Jujuy y modelo de comisión. |
+| 0.4 | 13/11/2026 | Alineado con DOC-01 V0.4 y DOC-02A: se quita el editor modular (hipótesis H8 a H10 anteriores y tareas de creación desde vacío), se suman los resultados de las encuestas, la prueba de uso pasa a plantillas y AR, se agregan métricas de tracción y riesgos del modelo de comisión. Se conservan alternativas y fuentes. |
