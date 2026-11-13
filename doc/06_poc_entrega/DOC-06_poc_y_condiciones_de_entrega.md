@@ -1,251 +1,259 @@
-# POC, fecha y condiciones de entrega
-## Plataforma web para crear y cotizar muebles a medida
+# POC y condiciones de entrega
+## Viruta – plataforma web para diseñar, visualizar y encargar muebles a medida
 
-**Código:** DOC-06  
-**Versión:** 0.2  
-**Fecha del documento:** 4 de noviembre de 2026  
-**Estado:** Protocolo propuesto. Pruebas no ejecutadas.  
-**Bases:** DOC-01 y DOC-02 V0.2; DOC-04A, DOC-04B y DOC-05 V0.1.
+**Código:** DOC-06
+**Versión:** 0.3
+**Fecha:** 13 de noviembre de 2026
+**Estado:** Protocolo propuesto. Pruebas no ejecutadas.
+**Bases:** DOC-02A y DOC-02B V0.3, DOC-04A V0.3, DOC-05 V0.3.
 
-## 1. Objetivo de la prueba de concepto
+---
 
-Comprobar que una persona puede crear muebles sencillos con una paleta común y que las piezas, medidas y relaciones producen un modelo 3D, un plano y un cómputo consistentes. Comprobar después que ese proyecto puede visualizarse en una foto, documentarse y registrarse como consulta revisable por una carpintería.
+## 1. Objetivo
 
-La POC se divide en núcleo y recorrido completo, siguiendo DOC-05. La aprobación técnica no acredita demanda, rentabilidad ni validez constructiva del mueble.
+Definir cómo se comprueba que lo construido cumple DOC-02A antes de presentarlo:
 
-Este documento es un estándar interno propuesto para este proyecto, no una norma técnica del sector ni una certificación externa.
+- **Núcleo:** el cliente arma un mueble desde una plantilla, ve si entra, lo ve en AR y obtiene la lista de materiales con resultados correctos (F1, F2 y tracción).
+- **Recorrido completo:** el cliente pide presupuesto y la carpintería lo responde, cobra la seña y sigue el trabajo desde su panel (F3).
 
-## 2. Fecha y responsables
+Las pruebas salen de los **criterios de aceptación de DOC-02A** y se escriben antes del código (TDD). Aprobar la parte técnica no demuestra demanda ni que el mueble sea fabricable tal cual: eso lo verifica la carpintería.
+
+Es un estándar interno del proyecto, no una norma del sector.
+
+## 2. Fechas y responsables
 
 | Dato | Estado |
 | --- | --- |
-| Fecha límite del hackathon | Entrega del proyecto: 13/11/2026. Hackatón: 22/11/2026. |
-| Inicio de implementación | Pendiente de acordar. |
-| Revisión del núcleo H0–H2 | Se calendariza al confirmar inicio y dedicación. |
-| Revisión del recorrido H3–H5 | Se calendariza después de estimar el núcleo. |
-| Presentación del MVP H6 | Pendiente del plazo y disponibilidad del piloto. |
-| Responsable de desarrollo | Maximo Acosta Gloss (programación). |
-| Responsable de aceptación técnica | José Manuel Fernández (análisis y diseño). Pendiente de confirmar. |
-| Carpintero revisor y localidad | Jujuy. Carpintero pendiente; candidatos: talleres que respondieron la encuesta. |
-| Operador de solicitudes | Pendiente de asignación. |
-
-Las fechas y horas se expresarán en horario de Argentina. Ningún plazo está comprometido en esta versión. Las personas podrán asumir varios roles en un equipo pequeño, dejando registrada la revisión que realizaron.
+| Entrega del proyecto | 13/11/2026 |
+| Hackatón | 22/11/2026 |
+| Responsable de desarrollo | Maximo Acosta Gloss |
+| Responsable de aceptación | José Manuel Fernández (a confirmar) |
+| Carpinterías para la prueba de uso | Jujuy. Candidatas: las que respondieron la encuesta. A confirmar. |
 
 ## 3. Alcance de aceptación
 
-### POC del núcleo
+### Núcleo (mínimo para la entrega, según la propuesta de DOC-05 §12)
 
-- Paleta mínima de tablero, lateral y estante.
-- Creación desde vacío de dos tipologías con las mismas operaciones.
-- Agregar, seleccionar, dimensionar, ubicar por referencias, duplicar y eliminar.
-- Deshacer y rehacer cambios confirmados.
-- Reglas simples, geometría resuelta, dimensiones generales y piezas.
-- Modelo 3D y comparación de resultados con casos manuales.
-- Avisos de datos inválidos y diseño incompleto.
+- Plantillas paramétricas, medidas del espacio con aviso, material y color, AR, guardado y guía de cómo medir (RF-01 a RF-06).
+- Despiece, placas, herrajes y barniz, y costo estimado si hay precios con fuente (RF-07 a RF-10).
+- Lista de espera y panel de métricas (RF-20, RF-21).
 
-### POC del recorrido
+### Recorrido completo
 
-- Recuperación local y archivo JSON editable auxiliar.
-- Frente, planta, lateral y PDF de referencia.
-- Fotografía y colocación visual del mismo mueble.
-- Solicitud persistente con revisión fija, contacto y autorización.
-- Reintento sin duplicado y recuperación por operador autorizado.
+- Cuentas, perfil y mapa de carpinterías (RF-12 a RF-14).
+- Pedido, aviso, presupuesto, seña con comisión y estados (RF-15 a RF-19).
+- Panel de la carpintería (RF-27 a RF-30).
 
-### Fuera de la prueba inicial
+### Fuera de la prueba
 
-CAD de formas arbitrarias, cálculos de estabilidad, optimización de placas, precios finales automáticos, pagos, reseñas, red abierta de profesionales y dependencias obligatorias de IA. Puertas, cajones y patas no son necesarios para aprobar la paleta mínima.
+Lo que DOC-02A marca como post-MVP (§4) y fuera de alcance (§5): PDF, chatbot, tutorial, catálogo de fotos, reseñas, más plantillas, agenda de visitas, diseño libre, chat en vivo, uso sin conexión, app nativa y cotización automática con proveedores. También la optimización real de cortes.
 
-## 4. Entorno y límites propuestos
+## 4. Entorno y límites
 
-Los siguientes valores son objetivos internos iniciales para que la prueba sea reproducible. Deben confirmarse en H0 y registrarse antes de ejecutar la aceptación. Un cambio debe quedar documentado, sin ajustar los umbrales después para ocultar un resultado fallido.
+Los valores salen de DOC-02B. Se registran antes de ejecutar las pruebas y no se cambian después para ocultar un resultado.
 
-| Parámetro | Propuesta inicial |
+| Parámetro | Valor |
 | --- | --- |
-| Entorno principal | Computadora con navegador Chromium estable; registrar sistema, CPU, RAM, navegador y resolución reales. |
-| Pantalla principal | 1366 × 768 o superior. |
-| Prueba móvil | Un dispositivo real, ancho lógico próximo a 390 px; registrar modelo y navegador. |
-| Edición móvil | Probar al menos selección y cambio numérico de dimensiones; no se exige arrastre preciso. Si no es usable, declarar soporte móvil parcial y mantener el pendiente. |
-| Piezas por proyecto de prueba | Hasta 30 piezas rectangulares. |
-| Historial | Al menos 20 operaciones confirmadas. |
-| Dimensiones de casos | Valores enteros en mm; espesor geométrico de referencia de 18 mm. |
-| Imagen de entrada | JPEG o PNG válido, hasta 5 MB; otros formatos se rechazan con explicación. |
-| Foto procesada | Lado mayor hasta 2048 px, conservando proporción. |
-| Archivo editable | JSON hasta 1 MB, sin foto ni datos personales. |
-| PDF de prueba | Hasta 10 MB; una y varias páginas. |
-| Recálculo confirmado | Objetivo de hasta 500 ms para 30 piezas en la computadora registrada. |
-| Exportación PDF | Objetivo de hasta 10 s para el caso de prueba en el entorno registrado. |
+| Dispositivo principal | Celular Android de gama media real, con Chrome. Registrar modelo y versión. |
+| Otros dispositivos | iPhone con Safari (si hay uno disponible) y PC con Chrome. |
+| Actualización del 3D al cambiar una medida | Menos de 1 s (RF-01). |
+| Fluidez del visor 3D | 30 fps o más en el Android registrado (RNF-04). |
+| Modelo para AR | Menos de 5 MB; abre en menos de 3 s con 4G (RNF-04). |
+| Respuesta de la API | p95 menor a 500 ms, sin contar IA (RNF-04). |
+| Primer mueble en AR | Menos de 5 minutos para una persona sin experiencia (RNF-02). |
+| Aviso por WhatsApp | Llega en menos de 1 minuto (RF-16). |
+| Medidas | Milímetros enteros; tablero de referencia de 18 mm. |
+| Tamaño de placa de referencia | 2400 × 1800 mm. |
 
-Medir recálculo y PDF en cinco repeticiones después de una ejecución de calentamiento; registrar los valores y exigir que cada repetición cumpla el objetivo. Los límites anteriores no implican capacidades garantizadas de proveedores ni tolerancias de carpintería. Se revisarán antes de congelar la implementación de cargas y almacenamiento.
+Para los tiempos: una ejecución de calentamiento y después cinco mediciones; las cinco tienen que cumplir.
 
-No se fija tiempo máximo de envío remoto porque depende de conexión y tamaño. Debe mostrarse progreso o estado, evitar confirmaciones falsas y permitir recuperación ante error. Registrar conexión y duración observada.
+## 5. Casos de referencia
 
-## 5. Casos geométricos de referencia
+Los resultados se calcularon a mano. Comprueban medidas nominales y cantidades; no son instrucciones de fabricación. No se descuenta el espesor del corte de la sierra.
 
-Estos casos comprueban geometría nominal y conteo. No son instrucciones de fabricación ni afirman que las uniones o la estabilidad estén resueltas. Material: tablero nominal de 18 mm, con herrajes y descuentos pendientes de revisión profesional.
+### Caso A — Estante
 
-### Caso A — Mueble abierto con estante
+Plantilla estante de **800 mm de ancho × 900 mm de alto × 300 mm de profundidad**, tablero de 18 mm, un estante interior. Dos laterales de altura completa; tapa, base y estante entre los laterales. Sin fondo ni puertas.
 
-Envolvente de **800 mm de ancho × 900 mm de alto × 300 mm de profundidad**. Dos laterales exteriores de altura completa; tapa, base y estante ubicados entre caras interiores. Sin fondo, patas, puertas ni cajones.
-
-| Pieza | Cantidad | Medidas nominales por pieza |
+| Pieza | Cantidad | Medidas por pieza |
 | --- | --- | --- |
 | Lateral | 2 | 900 × 300 × 18 mm |
-| Tapa entre laterales | 1 | 764 × 300 × 18 mm |
-| Base entre laterales | 1 | 764 × 300 × 18 mm |
-| Estante interior | 1 | 764 × 300 × 18 mm |
-| Total | 5 | Área nominal de tablero: 1,2276 m². |
+| Tapa | 1 | 764 × 300 × 18 mm |
+| Base | 1 | 764 × 300 × 18 mm |
+| Estante | 1 | 764 × 300 × 18 mm |
+| **Total** | **5** | Superficie de tablero: 1,2276 m² |
 
-El ancho interior resulta de 800 − 2 × 18 = 764 mm. El estante se ubica con su cara inferior a Z = 441 mm; su cara superior queda a 459 mm. Las caras interiores de base y tapa quedan a Z = 18 y Z = 882 mm. Los dos huecos libres verticales resultan de 423 mm cada uno.
+Ancho interior: 800 − 2 × 18 = 764 mm. Placas de 2400 × 1800 mm: **1** (redondeado hacia arriba).
 
-**Modificación esperada:** al aumentar el ancho exterior a 1000 mm conservando espesores y relaciones, las tres piezas interiores pasan a 964 × 300 × 18 mm. Los dos laterales no cambian; continúan cinco piezas. Área nominal: 1,4076 m².
+**Modificación:** con 1000 mm de ancho, tapa, base y estante pasan a 964 × 300 × 18 mm; los laterales no cambian. Siguen siendo 5 piezas; superficie 1,4076 m².
 
-### Caso B — Escritorio sencillo de tableros
+### Caso B — Mesa
 
-Envolvente de **1200 mm de ancho × 750 mm de alto × 600 mm de profundidad**. Una cubierta apoyada sobre dos laterales de altura 732 mm, ubicados en los extremos. Sin cajones, fondo ni refuerzo modelado. La estabilidad y las uniones permanecen pendientes.
+Plantilla mesa de **1200 mm de ancho × 750 mm de alto × 600 mm de profundidad**, tablero de 18 mm. Cubierta apoyada sobre dos laterales en los extremos.
 
-| Pieza | Cantidad | Medidas nominales por pieza |
+| Pieza | Cantidad | Medidas por pieza |
 | --- | --- | --- |
 | Cubierta | 1 | 1200 × 600 × 18 mm |
 | Lateral | 2 | 732 × 600 × 18 mm |
-| Total | 3 | Área nominal de tablero: 1,5984 m². |
+| **Total** | **3** | Superficie de tablero: 1,5984 m² |
 
-El ancho libre entre laterales es 1164 mm. La cubierta ocupa Z = 732 a 750 mm.
+**Modificación:** con 800 mm de alto, los laterales pasan a 782 × 600 × 18 mm; la cubierta no cambia. Superficie 1,6584 m².
 
-**Modificación esperada:** al aumentar la altura total a 800 mm manteniendo la cubierta de 18 mm y la relación de apoyo, los laterales pasan a 782 × 600 × 18 mm. La cubierta no cambia. Área nominal: 1,6584 m².
+### Caso C — Placas (testimonio 2)
 
-Las áreas son la suma del largo por ancho de las piezas, no el área de todas sus caras. No equivalen a cantidad de placas comerciales, desperdicio ni superficie de terminación.
+| Caso | Entrada | Resultado esperado |
+| --- | --- | --- |
+| C1 | 5 piezas de 1800 × 400 mm en placa de 2400 × 1800 mm | **1 placa** (entran 6 piezas por placa) |
+| C2 | 8 piezas de 1800 × 400 mm en placa de 2400 × 1800 mm | **2 placas** (redondeo hacia arriba) |
 
-### Caso C — Datos inválidos y diseño incompleto
+El testimonio 2 expresa el resultado con fracciones ("dos placas y media"). DOC-02A pide redondear hacia arriba; mostrar también la fracción queda a decidir.
 
-Probar una dimensión cero, una referencia inexistente, un ciclo de dependencias y una pieza aislada sin relación definida. Los errores de datos deben rechazarse sin corromper el último proyecto válido. La pieza aislada puede conservarse como diseño incompleto, con aviso visible en la ficha y solicitud.
+### Caso D — Medidas inválidas
+
+| Entrada | Resultado esperado |
+| --- | --- |
+| Ancho 0 | Se rechaza; se conserva el último diseño válido. |
+| Ancho negativo | Se rechaza; se conserva el último diseño válido. |
+| Ancho mayor al máximo de la plantilla | Se rechaza y se muestra el rango permitido. |
+
+### Caso E — No entra en el espacio
+
+Estante del caso A (800 × 900 × 300 mm) en un espacio de 780 mm de ancho, 1000 mm de alto, 320 mm de profundidad adelante y 290 mm atrás.
+
+| Comprobación | Resultado esperado |
+| --- | --- |
+| Ancho | Aviso: el mueble supera el espacio por 2 cm. |
+| Profundidad | Aviso de profundidades distintas; se usa 290 mm. Aviso: el mueble supera el espacio por 1 cm. |
+| Alto | Sin aviso. |
 
 ## 6. Matriz de aceptación del núcleo
 
-Todos los criterios comienzan con resultado **No ejecutado**. El resultado deberá registrarse al realizar la prueba.
+Todos los criterios empiezan en **No ejecutado**.
 
-| ID | Acción | Resultado esperado | Evidencia |
-| --- | --- | --- | --- |
-| N01 | Crear A y B desde vacío. | Misma paleta y operaciones; no editar código ni usar controles exclusivos de escritorio. | Grabación breve o ejecución observada y archivos. |
-| N02 | Comparar piezas y envolventes. | Cantidades enteras exactas y dimensiones esperadas; diferencia geométrica numérica máxima de 0,01 mm por redondeo computacional. | Tabla esperado/obtenido. |
-| N03 | Aplicar modificaciones de A y B. | Cambian las piezas dependientes y las áreas indicadas; las restantes se conservan. | Comparación antes/después. |
-| N04 | Duplicar una pieza y eliminarla. | ID nuevo y una pieza adicional; al eliminar vuelve el conteo anterior. | Registro de IDs y cantidades. |
-| N05 | Eliminar un lateral con dependientes. | Explicar relaciones afectadas y permitir cancelar o continuar con pendientes explícitos. | Captura del aviso y resultado. |
-| N06 | Deshacer y rehacer. | Restaurar geometría, relaciones y conteos; no se exige restaurar la misma marca temporal. | Comparación de datos relevantes. |
-| N07 | Ejecutar C. | Rechazo de errores y aviso persistente de incompleto, según su tipo. | Resultado de cada entrada. |
-| N08 | Girar cámara y hacer zoom. | Ninguna dimensión ni cantidad cambia. | Comparación del dominio antes/después. |
-| N09 | Resolver el mismo archivo en navegador y servidor. | Coinciden geometría, piezas y avisos con las mismas reglas. | Resultados comparados. |
-| N10 | Medir recálculo en 30 piezas. | Cumplir objetivo y procedimiento del apartado 4. | Registro de tiempos y entorno. |
+| ID | Requisito | Acción | Resultado esperado | Evidencia |
+| --- | --- | --- | --- | --- |
+| N01 | RF-01 | Cambiar una medida de la plantilla. | El 3D se actualiza en menos de 1 s. | Medición de tiempo. |
+| N02 | RF-01 | Ejecutar el caso D. | Se rechazan las medidas inválidas sin perder el diseño. | Captura de cada caso. |
+| N03 | RF-02 | Ejecutar el caso E. | Avisos con la diferencia en cm y uso de la profundidad menor. | Captura. |
+| N04 | RF-03 | Elegir material y color. | El 3D muestra el color; el material queda guardado. | Captura y dato guardado. |
+| N05 | RF-04 | Abrir la AR en Android con Chrome, en iPhone con Safari y en PC. | AR a escala real en celulares; visor 3D en PC. | Video o captura por dispositivo. |
+| N06 | RF-04 | Girar, hacer zoom y mover el mueble en AR. | Las medidas y cantidades no cambian. | Comparación antes y después. |
+| N07 | RF-05 | Guardar, cerrar y reabrir un proyecto. | Mismas medidas, material y color. | Comparación. |
+| N08 | RF-06 | Abrir la guía de cómo medir desde el paso de medidas. | Se ve la ilustración. | Captura. |
+| N09 | RF-07 | Ejecutar los casos A y B y sus modificaciones. | Piezas y medidas iguales a las esperadas. | Pruebas automáticas. |
+| N10 | RF-08 | Ejecutar los casos C1, C2 y la placa del caso A. | Cantidades de placas iguales a las esperadas. | Pruebas automáticas. |
+| N11 | RF-09 | Ver la lista de materiales de los casos A y B. | Tornillos, bisagras o correderas y barniz con su unidad. | Captura. |
+| N12 | RF-10 | Ver el costo estimado. | Etiqueta "estimado" y fecha de los precios. Si RF-10 pasa a post-MVP, se registra como alcance modificado. | Captura. |
+| N13 | RF-20 | Inscribirse en la lista de espera. | El contador sube en 1. | Captura antes y después. |
+| N14 | RF-21 | Ver el panel interno. | Los números coinciden con la base de datos. | Consulta comparada. |
+| N15 | RNF-01, RNF-12 | Correr las pruebas del módulo `materiales`. | Todas pasan; cobertura de 80% o más. | Reporte de pruebas. |
+| N16 | RNF-02 | Prueba con una persona sin experiencia. | Primer mueble en AR en menos de 5 minutos, sin ayuda. | Registro de tiempo. |
+| N17 | RNF-04 | Medir el visor y el modelo AR en el Android registrado. | 30 fps o más; modelo de menos de 5 MB que abre en menos de 3 s. | Medición. |
 
-La tolerancia numérica de N02 es solo para comparar representaciones computacionales; no autoriza precisión constructiva de centésimas de milímetro. Las dimensiones presentadas seguirán la resolución de 1 mm.
+## 7. Matriz de aceptación del recorrido completo
 
-## 7. Matriz de aceptación del recorrido
+| ID | Requisito | Acción | Resultado esperado | Evidencia |
+| --- | --- | --- | --- | --- |
+| R01 | RF-12 | Entrar como cliente a la bandeja de una carpintería. | Acceso denegado. | Prueba automática. |
+| R02 | RF-13 | Crear un perfil sin zona o sin WhatsApp. | No aparece en el mapa. | Captura. |
+| R03 | RF-14 | Elegir melamina y abrir el mapa. | Solo aparecen carpinterías que trabajan melamina. | Captura. |
+| R04 | RF-15 | Pedir presupuesto. | Pedido *Pendiente*; la carpintería ve diseño, medidas, material y despiece. | Captura del panel. |
+| R05 | RF-15 | Editar el proyecto después de enviar el pedido. | El pedido enviado no cambia. | Comparación. |
+| R06 | RF-15 | Reintentar el envío con la misma clave. | Se devuelve el mismo pedido; no se duplica. | Consulta de la base de datos. |
+| R07 | RF-16 | Crear un pedido. | Aviso por WhatsApp en menos de 1 minuto con el enlace al pedido. | Captura del mensaje. |
+| R08 | RF-16 | Simular una falla de n8n. | Se reintenta y el pedido igual está en la bandeja. | Registro. |
+| R09 | RF-17 | Responder un presupuesto con materiales y mano de obra. | Pedido *Presupuestado*; el cliente ve el detalle. | Captura. |
+| R10 | RF-18 | Pagar la seña en el entorno de prueba de Mercado Pago. | Pedido *Aceptado* solo después del webhook; comisión calculada. | Registro del webhook. |
+| R11 | RF-18 | Enviar un webhook con firma inválida. | Se rechaza; el pedido no cambia. | Prueba automática. |
+| R12 | RF-19 | Cambiar estados fuera de orden o desde otra carpintería. | Se rechaza. | Prueba automática. |
+| R13 | RF-27 | Abrir la bandeja con pedidos nuevos y viejos. | Los nuevos primero y marcados como no leídos. | Captura. |
+| R14 | RF-28 | Abrir el detalle de un pedido. | Visor 3D, medidas del mueble y del espacio, material, color, despiece y placas. | Captura. |
+| R15 | RF-29 | Crear un pedido con el panel abierto. | Aparece sin recargar. | Video. |
+| R16 | RF-30 | Ver el resumen de trabajos. | Los montos coinciden con los pagos confirmados. | Comparación. |
+| R17 | RNF-08 | Pedir un pedido ajeno conociendo su ID. | Acceso denegado. | Prueba automática. |
+| R18 | RNF-08 | Escanear el repositorio. | Ninguna clave en el código. | Resultado del escaneo. |
+| R19 | RNF-11 | Simular fallas de Maps, n8n y Mercado Pago. | El cliente sigue diseñando y viendo materiales. | Registro. |
 
-| ID | Acción | Resultado esperado | Evidencia |
-| --- | --- | --- | --- |
-| R01 | Guardar, cerrar y reabrir. | Recuperar último borrador confirmado y foto en el mismo navegador. | Comparación del proyecto. |
-| R02 | Exportar e importar JSON. | Recuperar piezas y relaciones sin foto ni contacto; informar esa limitación. | Archivos y resultado. |
-| R03 | Importar archivo incompatible. | Explicar rechazo y conservar el proyecto válido. | Caso de entrada y mensaje. |
-| R04 | Generar las tres vistas de A y B. | Frente, planta y lateral coinciden con geometría y cotas generales. | Plano y comparación manual. |
-| R05 | Exportar PDF y luego modificar el proyecto. | PDF conserva su revisión; nueva exportación refleja el cambio. | Ambos archivos identificados. |
-| R06 | Exportar tabla de varias páginas. | Sin filas perdidas, texto cortado o cotas superpuestas; unidades y avisos legibles. | Inspección visual del PDF. |
-| R07 | Subir foto admitida y ajustar composición. | Mueble visible y comparación antes/después; medidas y cómputo invariantes. | Imágenes y comparación de datos. |
-| R08 | Subir imagen inválida o excedida. | Rechazo claro sin pérdida del mueble. | Entradas de prueba. |
-| R09 | Enviar pedido de prueba. | Captura y archivos obligatorios conservados; ID solo tras finalizar. | Registro recuperado por operador. |
-| R10 | Reintentar por respuesta perdida. | Misma clave y contenido recuperan un único ID; contenido diferente con igual clave se rechaza. | Consulta de registros y respuestas. |
-| R11 | Interrumpir una carga obligatoria. | No presentar pedido completo; permitir recuperar o cancelar el intento. | Estado del intento y pantalla. |
-| R12 | Editar después del envío. | Captura enviada permanece fija e independiente del borrador. | Comparación de revisiones. |
-| R13 | Intentar lectura sin autorización. | Tablas, documentos y fotos privados no resultan accesibles por conocer sus IDs. | Prueba negativa registrada. |
-| R14 | Revisar y responder por el procedimiento piloto. | Operador accede a la ficha correcta y registra estado; registrada no se confunde con presupuestada. | Registro del procedimiento. |
-| R15 | Probar computadora y móvil declarados. | Recorrido y edición móvil mínima del apartado 4; errores y soporte parcial documentados. | Registro de dispositivos y obstáculos. |
-| R16 | Medir PDF y revisar límites. | Cumplir apartado 4; no ofrecer archivos incompletos como válidos. | Tiempos, tamaños y PDF. |
+## 8. Prueba de uso
 
-Para R06 usar un proyecto válido con suficientes piezas identificadas individualmente dentro del límite de 30. La prueba no debe depender de cantidades ficticias o filas duplicadas sin relación con el diseño.
+Se sigue el protocolo de DOC-02 §9: cinco clientes y dos carpinteros.
 
-## 8. Validación de uso y piloto
-
-La ronda propuesta conserva el protocolo de DOC-02: cinco clientes y dos carpinteros. Se documentará cualquier cambio de muestra antes de ejecutar y se evitará extrapolar porcentajes a todo el mercado.
-
-| Indicador | Criterio exploratorio propuesto |
+| Indicador | Criterio propuesto |
 | --- | --- |
-| Creación y descarga | Al menos cuatro de cinco clientes completan sin que el facilitador opere por ellos. |
-| Edición modular | Al menos cuatro agregan, dimensionan y reubican un elemento y duplican o eliminan otro. |
-| Comprensión | Al menos cuatro explican correctamente dimensiones y carácter preliminar de la ficha. |
-| Aporte del ambiente | Al menos tres describen una decisión concreta apoyada por la visualización. |
-| Utilidad para cotizar | Ambos carpinteros pueden iniciar una estimación y explican aclaraciones abordables. |
-| Atención efectiva | Al menos un profesional acepta y atiende una solicitud real bajo plazo acordado. |
+| Finalización | Al menos 4 de 5 clientes llegan de la plantilla a la lista de materiales sin que el facilitador opere por ellos. |
+| Tiempo | Al menos 4 de 5 ven su primer mueble en AR en menos de 5 minutos. |
+| Medidas | Al menos 4 de 5 cargan bien la profundidad adelante y atrás con la guía. |
+| Aporte de la AR | Al menos 3 de 5 cuentan una decisión concreta que tomaron al verlo. |
+| Utilidad para la carpintería | Los 2 carpinteros pueden presupuestar sin pedir datos por fuera. |
+| Atención real | Al menos una carpintería responde un pedido real desde el panel. |
 
-Registrar ayuda verbal, tiempo y bloqueos; no ocultarlos al contar finalizaciones. Comparar creación desde vacío y desde plantilla opcional cuando esté disponible, sin exigir que una modalidad gane.
-
-Sin necesidad genuina de compra, la atención comercial se marca como pendiente; no se simulan encargos reales para aprobar. Una prueba técnica puede aprobarse aunque la validación de uso o comercial falle, pero ese resultado deberá declararse por separado.
+Registrar ayuda, tiempo y bloqueos. Sin pedidos reales, la demanda queda pendiente: no se simulan encargos para aprobar.
 
 ## 9. Clasificación de incidencias
 
-| Severidad | Ejemplo | Efecto en aceptación |
+| Severidad | Ejemplo | Efecto |
 | --- | --- | --- |
-| Bloqueante | Pérdida de proyecto, cantidades contradictorias, acceso indebido, envío falso o imposible. | Impide aprobar el nivel afectado. |
-| Relevante | Operación esencial falla, plano ilegible o implantación no utilizable. | Corregir y repetir el criterio; no aprobar como cumplido. |
-| Menor | Alineación visual o texto mejorable sin afectar resultado ni comprensión. | Puede quedar pendiente con identificación y motivo. |
+| Bloqueante | Despiece o placas incorrectos, pérdida del proyecto, acceso indebido, pedido duplicado, pedido aceptado sin pago confirmado. | Impide aprobar el nivel. |
+| Relevante | AR que no abre en Android, aviso que no llega, panel que no carga. | Corregir y repetir el criterio. |
+| Menor | Detalle visual o de texto que no cambia el resultado. | Puede quedar pendiente, identificado. |
 
-No se exigen cero detalles visuales pendientes. Sí se exige ausencia de fallos que invaliden los criterios esenciales. Tras una corrección, repetir el caso afectado y las dependencias pertinentes; no rehacer comprobaciones sin relación con el cambio.
+Después de corregir, se repite el caso afectado y los que dependen de él.
 
 ## 10. Regla de aprobación
 
-- **Núcleo aprobado:** N01–N10 cumplen bajo el entorno y límites registrados.
-- **Recorrido aprobado:** núcleo aprobado y R01–R16 cumplen. Una reducción de soporte debe registrarse como alcance modificado y dejar de presentarse como cumplimiento del alcance original.
-- **MVP piloto aceptado:** recorrido aprobado, atención disponible, protocolo de uso ejecutado y resultados evaluados. Si no se alcanzan sus umbrales, registrar MVP en validación y los cambios necesarios.
-- **Pendiente:** una prueba no ejecutada no se considera aprobada.
+- **Núcleo aprobado:** N01 a N17 cumplen en el entorno registrado.
+- **Recorrido aprobado:** núcleo aprobado y R01 a R19 cumplen.
+- **Alcance modificado:** si algo se recorta (DOC-05 §12), se registra como tal y no se presenta como cumplido.
+- **Pendiente:** una prueba no ejecutada no cuenta como aprobada. "No aplica" tampoco cuenta como cumple.
 
-Los umbrales propuestos se congelarán en la versión de DOC-06 utilizada para aceptación. Un cambio posterior requiere motivo y nueva versión; no puede convertir retrospectivamente un fallo en éxito sin declarar la modificación.
-
-## 11. Paquete estándar de entrega
+## 11. Paquete de entrega
 
 | Elemento | Contenido mínimo |
 | --- | --- |
-| Aplicación | Versión ejecutable y acceso o instrucciones locales comprobadas. |
-| Código | Repositorio, commit y dependencias fijadas. |
-| Ejecución | README con instalación, configuración, arranque, compilación y comprobaciones necesarias. |
-| Configuración | Archivo de ejemplo de variables sin secretos; instrucciones de servicio y almacenamiento. |
-| Casos | JSON de A y B, modificaciones y entradas inválidas identificadas. |
-| Documentación generada | PDF e imágenes de ejemplo, con revisión y avisos. |
-| Resultados | Matrices N y R completadas, entorno, tiempos e incidencias. |
-| Piloto | Procedimiento de atención y resultados de uso, anonimizados. |
-| Pendientes | Lista breve con impacto, siguiente acción y responsable cuando exista. |
+| Aplicación | URL desplegada y acceso de demostración. |
+| Código | Repositorio público, commit identificado y dependencias fijadas. |
+| Ejecución | README con instalación, configuración y arranque (Docker). |
+| Configuración | `.env` de ejemplo sin claves. |
+| API | Documentación en Swagger. |
+| Pruebas | Matrices N y R completadas, con entorno, tiempos e incidencias. |
+| Tracción | Inscriptos, usuarios, pedidos y señas, con número y link o captura. |
+| Video | Utilidad, experiencia de usuario, modelo de negocio, tecnología interesante y tracción; muestra las pruebas. |
+| Pendientes | Lista breve: qué falta, impacto y siguiente paso. |
 
-No incluir credenciales, datos de clientes reales ni fotografías privadas en el repositorio o paquete de demostración. Usar datos sintéticos o expresamente autorizados.
+No se incluyen claves, datos de clientes reales ni fotos privadas. Se usan datos de prueba o autorizados.
 
-## 12. Registro de ejecución y aceptación
+## 12. Registro de cada prueba
 
-Cada criterio se registrará con esta estructura:
-
-| Campo | Valor a completar |
+| Campo | Valor |
 | --- | --- |
-| ID de criterio | Nxx o Rxx. |
-| Versión y commit | Pendiente. |
-| Entorno y fecha | Pendiente. |
-| Entrada y pasos | Archivo y acciones realizadas. |
-| Resultado esperado | Según este protocolo. |
-| Resultado observado | Pendiente de ejecución. |
-| Estado | No ejecutado / Cumple / No cumple / No aplica justificado. |
-| Evidencia | Archivo, captura, registro o ejecución observada. |
-| Revisor e incidencia | Pendiente. |
+| ID | Nxx o Rxx |
+| Versión y commit | |
+| Dispositivo y fecha | |
+| Pasos | |
+| Resultado esperado | Según este documento |
+| Resultado observado | |
+| Estado | No ejecutado / Cumple / No cumple / Alcance modificado |
+| Evidencia | |
+| Revisor | |
 
-No aplica no cuenta como cumple. Si afecta un criterio esencial, debe revisarse el alcance y la regla de aceptación antes de declarar aprobado el nivel.
+## 13. Antes de recibir pedidos reales
 
-El acta de cierre identificará el nivel aprobado, la fecha, la versión probada y los pendientes. En esta emisión no se ha ejecutado ni aprobado ninguna prueba.
+- Al menos una carpintería confirmada, con zona, WhatsApp y compromiso de responder.
+- Comisión aceptada por la carpintería.
+- Mercado Pago en modo producción.
+- Consentimiento del cliente y aviso de privacidad (Ley 25.326).
+- Aclaración visible de que la carpintería verifica las medidas antes de fabricar.
 
-## 13. Condiciones previas al uso real
-
-Antes de recibir pedidos reales deben estar confirmados destinatario, zona, responsable, canal y plazo de respuesta; acceso privado a archivos; autorización del cliente y procedimiento de conservación y eliminación. La revisión profesional sigue siendo necesaria antes de fabricar.
-
-La POC puede avanzar con casos sintéticos mientras se coordinan estas condiciones. No se presentará una demostración con datos de prueba como servicio operativo de carpinterías asociadas.
+Mientras tanto se prueba con datos de demostración, identificados como tales.
 
 ## 14. Próximo paso
 
-Completar fechas, responsables y entorno de aceptación; confirmar los casos y límites propuestos. Después comenzar H0 de DOC-05: base del proyecto, catálogo mínimo y casos de referencia. Este documento no inicia por sí mismo la implementación ni reserva servicios.
+Confirmar con el equipo el alcance de la entrega (DOC-05 §12) y escribir las pruebas de los casos A a E antes de programar el módulo `materiales`.
 
 ## 15. Historial
 
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
-| 0.1 | 04/11/2026 | Protocolo inicial, casos manuales, matrices de aceptación y estándar de entrega. Fechas y ejecución pendientes. |
-| 0.2 | 12/11/2026 | Fechas, responsables y localidad completados con lo definido por el equipo. Alcance de pagos y placas pendiente de alinear (ver `coherencia_y_decisiones.md`). |
+| 0.1 | 04/11/2026 | Protocolo inicial, casos manuales, matrices de aceptación y estándar de entrega para el editor modular. |
+| 0.2 | 12/11/2026 | Fechas, responsables y localidad completados. |
+| 0.3 | 13/11/2026 | Reescrito sobre DOC-02A y DOC-02B: matrices desde los criterios de aceptación, entorno mobile first, casos de estante, mesa, placas, medidas inválidas y espacio insuficiente, tracción y video en el paquete de entrega. Se conservan los casos A y B adaptados, la clasificación de incidencias y el registro de pruebas. |
