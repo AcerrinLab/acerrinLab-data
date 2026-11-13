@@ -1,174 +1,215 @@
 # Informe descriptivo del proyecto
-## Plataforma web para diseñar y cotizar muebles a medida
+## Viruta – plataforma web para diseñar, visualizar y encargar muebles a medida
 
-**Código:** DOC-01  
-**Versión:** 0.3  
-**Fecha:** 4 de noviembre de 2026  
-**Estado:** Borrador inicial para revisión  
-**Nombre comercial:** Viruta (AcerrinLab)  
-**Equipo:** José Manuel Fernández y Maximo Acosta Gloss  
-**Alineación (12/11/2026):** hay puntos de alcance que difieren de lo ya definido por el equipo. Ver `doc/coherencia_y_decisiones.md`.  
+**Código:** DOC-01
+**Versión:** 0.4
+**Fecha:** 13 de noviembre de 2026
+**Estado:** Borrador para revisión del equipo.
+**Nombre comercial:** Viruta (AcerrinLab)
+**Equipo:** José Manuel Fernández y Maximo Acosta Gloss
+**Bases:** `idea_original.md`, `contexto_general.md`, DOC-02A y DOC-02B V0.3, encuestas y testimonios de `02_analisis/`.
+
+---
 
 ## 1. Resumen de la propuesta
 
-El proyecto propone una aplicación web que ayude a transformar una idea de mueble en una propuesta visual y una ficha de referencia para solicitar presupuesto a una carpintería.
+Viruta es una aplicación web para que una persona pase de "tengo una idea de mueble" a "tengo un mueble que entra en mi espacio y una carpintería que lo cotiza".
 
-El usuario podrá cargar una fotografía del ambiente, ingresar medidas reales del espacio y crear un mueble combinando elementos de una paleta modular, desde un espacio de trabajo vacío o una plantilla opcional. La aplicación presentará el mueble en 3D, permitirá visualizar su ubicación sobre la imagen del ambiente y generará vistas de referencia y un listado estimado de piezas y materiales. Finalmente, podrá descargarse una ficha PDF y registrarse una solicitud de presupuesto destinada a una carpintería piloto.
+El cliente elige una plantilla (estante, mesa o bajo mesada), carga las medidas de su espacio y ajusta el mueble viéndolo en 3D. La aplicación le avisa si no entra, se lo muestra en su casa con realidad aumentada y le calcula qué tiene que comprar: piezas, placas, herrajes y barniz. Con eso puede hacerlo por su cuenta o encargarlo a una carpintería de su zona.
 
-El proyecto abarca muebles en general. El MVP tendrá como función principal un editor modular para crear muebles sencillos de tableros rectangulares, con una paleta inicial acotada y reglas de ensamblaje. Escritorios, estantes y muebles bajos serán casos de ejemplo y prueba, sin constituir un catálogo cerrado. La visión futura incluye módulos más complejos y una red de profesionales con presupuestos, seguimiento y reseñas.
+La carpintería recibe el pedido con las medidas, el material y el despiece, por WhatsApp y en un panel propio. Desde ahí responde el presupuesto y sigue el trabajo. Cuando el cliente acepta, paga la seña por Mercado Pago y la plataforma cobra una comisión a la carpintería.
+
+El MVP es **vertical**: muebles simples en madera, melamina o aglomerado, para vecinos y carpinterías independientes de Jujuy.
 
 ## 2. Problema que se busca resolver
 
-La hipótesis inicial es que algunas personas tienen dificultades para comunicar cómo quieren un mueble, visualizarlo en su ambiente y reunir la información necesaria para solicitar una cotización. Por su parte, un carpintero puede necesitar varios intercambios para comprender el pedido y determinar sus dimensiones, material y características.
+Las personas no pueden pasar de una idea de mueble a un pedido que una carpintería pueda cotizar sin errores de medida ni idas y vueltas.
 
-Se propone reducir esa incertidumbre mediante una descripción visual y dimensional compartida. Estas necesidades deberán contrastarse con entrevistas; este informe no constituye un estudio de mercado ni acredita demanda comprobada.
+Lo que dicen los datos (encuesta a 31 clientes y 4 carpinterías, más 2 testimonios):
 
-## 3. Usuarios previstos
+- **58%** de los clientes dice que su mayor frustración es calcular mal las medidas y que el mueble no entre.
+- **48%** no logra imaginar cómo combina el color y el estilo con su ambiente.
+- **32%** no sabe cuánto material comprar.
+- **90%** dice que hoy le cuesta encontrar planos o guías (promedio 2,55 sobre 5).
+- Los carpinteros lo confirman: el cliente mide mal (por ejemplo, un bajo mesada con distinta profundidad adelante y atrás) y ellos tienen que volver a medir siempre (testimonio 1).
+- **100%** de las carpinterías necesita **medidas** y **tipo de madera** para cotizar.
 
-| Usuario | Necesidad | Beneficio esperado |
-| --- | --- | --- |
-| Cliente particular | Definir y comunicar un mueble para su espacio. | Visualizar una propuesta y enviar un pedido más claro. |
-| Carpintero o carpintería piloto | Recibir información suficiente para evaluar un encargo. | Revisar una ficha organizada y elaborar su presupuesto. |
-| Equipo del proyecto | Validar el recorrido y atender solicitudes iniciales. | Observar dificultades y reunir evidencia para mejorar el producto. |
+El detalle de las encuestas está en DOC-02A §2.
 
-El segmento inicial, la localidad de prueba y la carpintería participante quedan pendientes de definición. El MVP no requiere un portal completo para profesionales.
+## 3. Usuarios
+
+| Usuario | Necesidad | Beneficio |
+|---|---|---|
+| Cliente | Definir un mueble que entre en su espacio, saber qué comprar y encontrar quién lo haga. | Ve el mueble en su casa antes de encargarlo, recibe la lista de materiales y pide presupuesto con todos los datos. |
+| Carpintería | Recibir pedidos con medidas confiables y el material definido. | Presupuesta sin perder tiempo en pedidos incompletos y gestiona sus trabajos desde un panel. |
+| Equipo (AcerrinLab) | Validar el producto y conseguir tracción. | Métricas reales de uso, lista de espera y señas cobradas. |
+
+**Zona inicial:** San Salvador de Jujuy y alrededores.
 
 ## 4. Propuesta de valor
 
-**Convertir una idea de mueble en un proyecto de referencia para cotizar con carpinteros de la zona.**
+**Diseñá tu mueble, probalo en tu espacio, sabé qué comprar y encargalo a una carpintería de tu zona.**
 
-La propuesta reúne configuración, visualización en el ambiente y documentación preliminar dentro de un mismo recorrido. Su utilidad y diferenciación frente a las alternativas se evaluarán en el estudio de mercado y las pruebas con usuarios.
+Hay herramientas que configuran muebles y calculan piezas, y otras que conectan clientes con profesionales (DOC-02 §4). Viruta une las dos cosas en un mismo recorrido: la carpintería recibe exactamente lo que diseñó el cliente.
 
 ## 5. Objetivo del MVP
 
-Permitir que un usuario cree un mueble sencillo mediante un editor modular, comprenda su apariencia y dimensiones, descargue una ficha coherente con el diseño y registre una solicitud de presupuesto revisable por una carpintería piloto.
+Que un cliente arme un mueble desde una plantilla, compruebe que entra, lo vea en su espacio con AR, obtenga la lista de materiales y pida presupuesto a una carpintería. Y que esa carpintería pueda presupuestar desde su panel y cobrar la seña dentro de la aplicación.
 
-El objetivo de validación es comprobar si el cliente entiende y completa el proceso, y si el carpintero considera útil la información recibida para iniciar una cotización.
+El MVP se limita a **3 funcionalidades clave** (DOC-02A §3):
+
+```
+[F1] Diseñá y probalo en tu espacio  ──>  [F2] Sabé qué comprar  ──>  [F3] Encargalo a una carpintería
+```
 
 ## 6. Recorrido principal
 
-1. **Crear el proyecto:** indicar un nombre y comenzar en un espacio de trabajo vacío o con una plantilla opcional de mueble.
-2. **Cargar el ambiente:** subir una fotografía e ingresar el ancho disponible, la profundidad máxima y otras medidas relevantes. Registrar obstáculos conocidos cuando corresponda.
-3. **Crear el mueble:** agregar tableros, laterales y estantes desde la paleta; seleccionar, dimensionar, mover, duplicar o eliminar elementos mediante controles sencillos. Ajustar posiciones con encastres y referencias para mantener relaciones coherentes. Elegir material y acabado desde una paleta controlada.
-4. **Revisar el diseño:** observar el modelo 3D y sus dimensiones generales, y resolver avisos de interferencias o elementos sin unión definida. Deshacer y rehacer cambios.
-5. **Visualizar en el espacio:** colocar el modelo sobre la foto y ajustar su posición, escala y orientación mediante controles sencillos. La fidelidad de esta representación se evaluará en la POC.
-6. **Consultar la ficha:** revisar frente, planta y lateral, dimensiones y piezas y materiales estimados.
-7. **Descargar:** obtener un PDF correspondiente a la configuración actual.
-8. **Solicitar presupuesto:** ingresar datos de contacto y observaciones, autorizar su envío al destinatario identificado y registrar el pedido junto con la versión del proyecto enviada.
-9. **Recibir confirmación:** visualizar que la solicitud quedó registrada. En el piloto, la revisión y respuesta comercial podrán realizarse manualmente.
+**Cliente:**
 
-## 7. Alcance funcional inicial
+1. **Elegir una plantilla:** estante, mesa o bajo mesada.
+2. **Medir el espacio:** con la guía visual de cómo medir (frente, fondo, arriba y abajo), cargar ancho, alto y profundidad adelante y atrás.
+3. **Ajustar el mueble:** ancho, alto, profundidad y cantidad de estantes, viendo el modelo 3D. Si el mueble no entra, la aplicación avisa cuánto sobra.
+4. **Elegir material y color:** pino, melamina o aglomerado.
+5. **Verlo en su espacio:** abrir la vista de realidad aumentada en el celular, a escala real.
+6. **Ver qué comprar:** despiece, cantidad de placas, tornillos, bisagras o correderas, litros de barniz o pintura y costo estimado.
+7. **Guardar** el proyecto en "Mis proyectos".
+8. **Elegir cómo hacerlo:**
+   - **Hacelo vos mismo:** usar la lista de materiales para comprar y fabricar.
+   - **Encargalo:** ver en un mapa las carpinterías cercanas que trabajan ese material y pedir presupuesto.
+9. **Aceptar el presupuesto** y pagar la seña por Mercado Pago.
+10. **Seguir el estado** del pedido hasta la entrega.
 
-| Función | Alcance del MVP |
-| --- | --- |
-| Editor modular | Crear muebles sencillos a partir de piezas rectangulares. Plantillas opcionales como ayuda, sin restringir el producto a un escritorio. |
-| Paleta de elementos | Tablero, lateral y estante como conjunto mínimo propuesto. Puerta, cajón y patas aparecen en el concepto visual; su inclusión funcional se resolverá en la POC según reglas y complejidad. |
-| Operaciones | Agregar, seleccionar, dimensionar, mover, duplicar y eliminar; deshacer y rehacer. Encastres o referencias de colocación dentro del sistema modular. |
-| Dimensiones y materiales | Dimensiones de piezas, relaciones entre ellas, espesor y acabados controlados. Paletas iniciales y límites por definir con el carpintero. |
-| Foto del ambiente | Carga de imagen y medidas ingresadas por el usuario. |
-| Vista 3D | Inspección del mueble creado mediante giro y zoom. |
-| Implantación visual | Superposición del modelo sobre la fotografía con ajuste manual. No se promete medición automática ni ajuste físico exacto. |
-| Plano de referencia | Frente, planta y lateral con dimensiones generales. |
-| Cómputo preliminar | Listado de piezas con cantidad y dimensiones; materiales y herrajes según reglas validadas para el modelo. |
-| Descarga | Ficha PDF del proyecto. |
-| Contacto comercial | Registro persistente de solicitud y configuración enviada para atención por una carpintería piloto. |
+**Carpintería:**
 
-Las cuentas de usuario y la recuperación de proyectos entre dispositivos se decidirán en arquitectura según las necesidades de la prueba. No son un requisito inicial del recorrido.
+1. Crear su perfil: nombre, zona, WhatsApp y materiales con los que trabaja.
+2. Recibir el aviso del pedido por WhatsApp, con el enlace al panel.
+3. Ver el pedido en su panel: modelo 3D, medidas del mueble y del espacio, material, color, despiece y placas.
+4. Responder con un presupuesto que separa materiales y mano de obra, e indicar si el cliente compra el material.
+5. Cuando el cliente paga la seña, verificar las medidas en el lugar, fabricar y marcar la entrega.
 
-## 8. Contenido de la ficha de referencia
+## 7. Alcance funcional del MVP
 
-- Identificación del proyecto, fecha y versión de configuración.
-- Tipo de mueble, dimensiones generales, material y espesor seleccionado.
-- Vistas de frente, planta y lateral con cotas generales.
-- Imagen del modelo y visualización del ambiente, cuando estén disponibles.
-- Listado preliminar de piezas: identificación, cantidad, largo, ancho y espesor.
-- Materiales complementarios y herrajes estimados cuando existan reglas confirmadas.
-- Observaciones, supuestos y aspectos que debe revisar el carpintero.
-- Indicación de que se trata de documentación preliminar sujeta a verificación antes de fabricar.
+| Funcionalidad | Alcance | Requisitos |
+|---|---|---|
+| Plantillas paramétricas | Estante, mesa y bajo mesada, con medidas dentro de un rango por plantilla. | RF-01 |
+| Medidas del espacio | Aviso si el mueble no entra o si las medidas son inconsistentes. | RF-02 |
+| Material y color | Pino, melamina y aglomerado. | RF-03 |
+| Realidad aumentada | Vista a escala real en Android e iPhone; visor 3D en PC. | RF-04 |
+| Mis proyectos | Guardar y reabrir. | RF-05 |
+| Guía de cómo medir | Ilustración en el paso de medidas. | RF-06 |
+| Despiece | Piezas con medidas en mm y cantidad. | RF-07 |
+| Placas | Cantidad de placas o tablas según el tamaño estándar del material, redondeada hacia arriba. | RF-08 |
+| Herrajes y terminación | Tornillos, bisagras o correderas y litros de barniz o pintura. | RF-09 |
+| Costo estimado | Marcado como estimado, con fecha de los precios de referencia. | RF-10 |
+| Cuentas | Roles Cliente y Carpintería. | RF-12 |
+| Carpinterías | Perfil y mapa filtrado por material. | RF-13, RF-14 |
+| Pedido y presupuesto | Pedido con todos los datos del diseño; presupuesto con materiales y mano de obra. | RF-15, RF-17 |
+| Aviso | WhatsApp vía n8n. | RF-16 |
+| Seña y comisión | Mercado Pago, con registro de la comisión. | RF-18 |
+| Estados | Medidas verificadas, en fabricación y entregado. | RF-19 |
+| Panel de la carpintería | Bandeja, detalle con visor 3D, avisos en tiempo real y resumen de trabajos. | RF-27 a RF-30 |
+| Tracción | Lista de espera con contador y panel de métricas. | RF-20, RF-21 |
 
-La cantidad de piezas no equivale directamente a la cantidad de placas comerciales que deben comprarse. La optimización de cortes y el desperdicio no forman parte del cálculo inicial salvo incorporación expresa y validada.
+Lo que queda para después y lo que está fuera de alcance está en DOC-02A §4 y §5.
 
-## 9. Coherencia de datos y límites técnicos
+## 8. Contenido del pedido que recibe la carpintería
 
-Las medidas y opciones confirmadas del proyecto deberán alimentar el modelo 3D, las vistas del plano y el listado de piezas. Una modificación deberá actualizar todos esos resultados. El PDF y la solicitud conservarán la configuración correspondiente al momento de su generación o envío.
+- Identificación del pedido, fecha y cliente.
+- Modelo 3D del mueble, que se puede girar.
+- Tipo de mueble (plantilla) y medidas generales.
+- Medidas del espacio, incluida la profundidad adelante y atrás.
+- Material, espesor y color.
+- Despiece: cada pieza con largo, ancho, espesor y cantidad.
+- Cantidad estimada de placas o tablas.
+- Herrajes y litros de barniz o pintura estimados.
+- Aclaración de que las medidas las cargó el cliente y se verifican en el lugar antes de fabricar.
 
-La fotografía servirá como referencia visual. Las dimensiones provendrán de mediciones ingresadas por el usuario, no de estimaciones automáticas a partir de la foto. La implantación no garantiza por sí sola que el mueble entre en el espacio ni que pueda trasladarse o instalarse.
+Al enviar el pedido se guarda una **copia fija** del diseño: si el cliente lo edita después, el pedido enviado no cambia.
 
-El cómputo deberá derivarse de los elementos colocados, sus dimensiones, sus relaciones y reglas constructivas explícitas revisadas con un carpintero. La geometría, por sí sola, no confirma estabilidad, uniones o herrajes. Los diseños con relaciones sin resolver deberán identificarse como incompletos en la ficha; no podrán presentarse como listos para fabricar. Si una cantidad no puede justificarse, se marcará como pendiente de definición en lugar de presentarse como exacta.
+## 9. Coherencia de datos y límites
 
-La inteligencia artificial es una posibilidad para interpretar descripciones o mejorar la presentación visual en una evolución posterior. No es una dependencia obligatoria del MVP ni la fuente de las medidas, el despiece o la validación constructiva.
+- Las medidas del mueble alimentan el modelo 3D, la vista en AR, el despiece y la lista de materiales. Cambiar una medida actualiza todo.
+- Las medidas se guardan en **milímetros enteros**.
+- Las medidas del espacio las carga el cliente. La aplicación ayuda con la guía y los avisos, pero la carpintería las verifica en el lugar (estado *Medidas verificadas*), como ya lo hace hoy.
+- La realidad aumentada sirve para ver el mueble en el espacio; no es una herramienta de medición.
+- Las placas, los herrajes, el barniz y el costo son **estimados** y se muestran así. El cálculo de placas es simple (piezas por placa, redondeo hacia arriba); no optimiza cortes.
+- La inteligencia artificial no es la fuente de las medidas ni del despiece. El chatbot con Gemini queda para después, solo como asistente (RF-22).
 
-## 10. Funciones previstas para futuras versiones
+## 10. Funciones previstas para después del MVP
 
-- Más familias de muebles y plantillas iniciales de mayor complejidad.
-- Nuevos módulos y configuraciones, con reglas propias.
-- Interpretación de bocetos y descripciones asistida por IA.
-- Integración visual más realista en fotografías.
-- Optimización de cortes y estimación de compra de placas.
-- Precios orientativos con fuentes, fecha y alcance identificados.
-- Perfiles de profesionales y comparación de presupuestos.
-- Seguimiento de pedidos y reseñas asociadas a trabajos realizados.
-- Pagos dentro de la plataforma, sujetos a evaluación específica.
-- Ampliación a otros oficios, después de validar el caso de carpintería.
+Validadas por los datos (DOC-02A §4):
 
-El editor modular sencillo forma parte del MVP. El modelado CAD de geometría arbitraria, formas curvas, análisis estructural automático, el mercado completo de oficios y el presupuesto final automático quedan fuera de esta primera versión.
+- Exportar el plano en PDF para hacerlo por tu cuenta (RF-11).
+- Chatbot con Gemini que recomienda madera según el uso y advierte diseños inseguros (RF-22).
+- Tutorial inicial (RF-23).
+- Catálogo de fotos por carpintería (RF-24).
+- Calificaciones y reseñas (RF-25).
+- Más plantillas: placard, mesa de luz, muebles infantiles (RF-26).
+- Agenda de visitas para verificar medidas (RF-31).
 
-## 11. Presupuesto y relación con el profesional
+Otras ideas para evaluar:
 
-El MVP no garantizará un precio final automático. El carpintero revisará medidas, material, uniones, terminaciones, herrajes, transporte e instalación antes de emitir su propuesta comercial.
+- Optimización real de cortes.
+- Imagen del mueble dentro de una foto del ambiente, generada con Gemini, como mejora ilustrativa.
 
-La plataforma facilitará el pedido inicial; el alcance definitivo del trabajo y las condiciones comerciales deberán confirmarse con el profesional. En esta etapa no se define una comisión, suscripción ni cobro por solicitud: son alternativas para estudiar.
+## 11. Modelo de negocio
+
+**Comisión por trabajo concretado.**
+
+- Cuando el cliente acepta el presupuesto, paga la seña por Mercado Pago dentro de la aplicación.
+- La plataforma cobra a la carpintería una comisión de **8% a 12%** sobre el trabajo, descontada de esa seña.
+- **Quién paga:** la carpintería.
+- **Por qué paga:** recibe un cliente que ya trae diseño, medidas y material definidos. Presupuesta más rápido y pierde menos tiempo en consultas que no se concretan.
+
+Lo respaldan los datos: solo el 19% de los clientes pagaría una suscripción, y cobrar 50% de seña ya es como trabajan hoy los carpinteros (testimonio 1).
 
 ## 12. Supuestos y cuestiones pendientes
 
-| Supuesto o decisión | Forma prevista de resolverlo |
-| --- | --- |
-| El cliente puede obtener las medidas mínimas del espacio. | Probar instrucciones de medición con usuarios. |
-| La visualización ayuda a decidir o comunicar el pedido. | Observar su uso y preguntar qué decisiones facilita. |
-| La ficha aporta información útil para cotizar. | Revisarla con un carpintero sobre un caso concreto. |
-| Un usuario puede crear un mueble con una paleta limitada. | Probar tareas de creación y modificación sin asistencia operativa. |
-| Los muebles creados pueden documentarse con coherencia. | Definir reglas por elemento, relaciones, límites y avisos con el profesional; comprobar al menos dos tipologías sencillas. |
-| La implantación manual resulta comprensible. | Evaluarla en la POC y ajustar controles o alcance. |
-| Existe interés de profesionales en recibir solicitudes. | Entrevistas y acuerdo con una carpintería piloto. |
-| Plazo y recursos disponibles. | Confirmar reglas del hackathon, integrantes, dedicación y presupuesto. |
-
-Actualización 12/11/2026: la entrega del hackatón es el **13 de noviembre de 2026**; las tecnologías están definidas en `04_diseno_y_arquitectura/tecnologias.md` (React + Spring Boot, monolito modular). Siguen pendientes los costos operativos y las metas numéricas de validación.
+| Supuesto o decisión | Cómo resolverlo |
+|---|---|
+| Las carpinterías aceptan pagar la comisión. | No se preguntó en la encuesta. Consultarlo al sumar 2 o 3 respuestas más (DOC-02A §7). |
+| Base de la comisión cuando el cliente compra el material y paga solo la mano de obra (testimonio 1). | Definir con las carpinterías. |
+| El cliente puede medir bien con la guía. | Prueba de uso (DOC-02 §9). |
+| Un cliente sin experiencia arma su mueble y lo ve en AR en menos de 5 minutos. | Prueba de uso (RNF-02). |
+| El pedido le alcanza a la carpintería para presupuestar sin pedir datos por fuera. | Revisión de un pedido con carpinterías (DOC-02 §9). |
+| Hay precios de referencia con fuente para el costo estimado. | Si no se consiguen, RF-10 pasa a post-MVP. |
+| Decisiones abiertas: qué se entrega el 13/11, seña integrada o link manual, chatbot, app Android, cuenta del cliente. | DOC-05 §15. |
 
 ## 13. Condiciones generales de calidad
 
-- Mostrar unidades de forma consistente y advertir configuraciones fuera de los límites permitidos.
-- Mantener coherencia entre elementos, relaciones, modelo, vistas, cómputo y PDF, incluso al duplicar, eliminar o redimensionar piezas.
-- Diferenciar entre una pieza de tablero, un conjunto como un cajón y un herraje comercial para evitar doble conteo.
-- Evitar posiciones ambiguas mediante referencias y mostrar conflictos detectados sin prometer una validación constructiva completa.
-- Presentar controles comprensibles y mensajes claros ante errores de carga o envío.
-- Permitir completar el recorrido en computadora y disponer de una interfaz usable en celular; el alcance de la edición 3D móvil se verificará en las pruebas.
-- Confirmar el registro efectivo de solicitudes y evitar pedidos duplicados por reintentos.
-- Solicitar solamente los datos necesarios e informar qué fotos, datos y documentos recibirá la carpintería. La conservación y eliminación se definirán antes del piloto.
+Las condiciones medibles están en DOC-02B. En resumen:
 
-Los criterios medibles y casos de prueba se desarrollarán en la ficha de POC y estándar de entrega.
+- Precisión: milímetros enteros y cálculos cubiertos por pruebas (RNF-01).
+- Simple: primer mueble en AR en menos de 5 minutos, lenguaje simple (RNF-02).
+- Accesible: texto de 16 px o más, contraste AA, botones grandes (RNF-03).
+- Rápido: 3D a 30 fps en Android de gama media (RNF-04).
+- **Mobile first**, Android primero (RNF-05).
+- Seguro: JWT, BCrypt, HTTPS, OWASP Top 10, sin claves en el repositorio público (RNF-08).
+- Privado: Ley 25.326; los datos personales se piden recién al pedir presupuesto (RNF-09).
+- Honesto: todo valor calculado se muestra como estimado y las métricas salen de datos reales (RNF-10).
 
 ## 14. Resultado esperado
 
-Una demostración funcional en la que una persona cree un mueble sencillo con la paleta modular, lo visualice sobre una foto de su ambiente, descargue una ficha de referencia y registre un pedido que pueda revisar una carpintería piloto.
+Una aplicación online en la que una persona arma un mueble desde una plantilla, ve que entra, lo prueba en su espacio con AR, obtiene la lista de materiales y pide presupuesto a una carpintería de Jujuy, que lo responde desde su panel. Más métricas reales de uso para la entrega del hackatón.
 
-La demostración deberá aportar evidencia sobre la coherencia técnica del proyecto y su utilidad para cliente y profesional. Las conclusiones definirán si corresponde ampliar funciones, corregir el recorrido o revisar la propuesta.
+## 15. Documentación relacionada
 
-## 15. Documentación relacionada y siguiente paso
+| Código | Documento |
+|---|---|
+| DOC-02 | Estudio de mercado y validación |
+| DOC-02A | Requisitos funcionales |
+| DOC-02B | Requisitos no funcionales |
+| DOC-03 | Modelos visuales (mockups) |
+| DOC-04A | Flujo de arquitectura |
+| DOC-04B | Arquitectura técnica (pendiente; base: `tecnologias.md`) |
+| DOC-05 | Plan evolutivo |
+| DOC-06 | POC y condiciones de entrega |
 
-Este informe establece la base conceptual. Se completará con el estudio de mercado, los modelos visuales, la arquitectura, el modo de desarrollo y herramientas, el plan evolutivo y la ficha de POC con fecha y condiciones de entrega.
-
-El siguiente documento será el **Estudio de mercado y validación de la propuesta**. Sus resultados podrán modificar este alcance antes de iniciar la implementación.
-
-## 16. Referencias visuales y alcance de las paletas
-
-Las imágenes conceptuales muestran dos momentos: visualización del mueble en el ambiente y creación modular con ficha de referencia. La primera imagen utiliza un escritorio como ejemplo; su texto específico no limita el producto. La segunda muestra un mueble bajo y una paleta de componentes. Son referencias de interfaz, no evidencias de funciones implementadas ni planos constructivos validados.
-
-La paleta de componentes define qué elementos puede agregar el usuario. La paleta de materiales y colores define opciones de tablero y acabado. Los colores iniciales ilustrativos son roble, blanco y nogal; marcas, disponibilidades, espesores y compatibilidades quedan por definir. No se presupone que cualquier combinación sea fabricable.
-
-## 17. Historial
+## 16. Historial
 
 | Versión | Fecha | Cambio |
 | --- | --- | --- |
-| 0.1 | 04/11/2026 | Primera descripción del proyecto y delimitación propuesta del MVP. Pendiente de revisión del equipo y validación externa. |
-| 0.2 | 04/11/2026 | Editor modular como función principal; muebles generales, paletas, operaciones y validación de creación. Escritorio conservado como ejemplo. |
-| 0.3 | 12/11/2026 | Nombre comercial, equipo, fecha de entrega y tecnologías actualizados. Diferencias de alcance señaladas en `coherencia_y_decisiones.md`. |
+| 0.1 | 04/11/2026 | Primera descripción del proyecto y delimitación propuesta del MVP. |
+| 0.2 | 04/11/2026 | Editor modular como función principal. |
+| 0.3 | 12/11/2026 | Nombre comercial, equipo, fecha de entrega y tecnologías actualizados. |
+| 0.4 | 13/11/2026 | Reescrito sobre la idea original, las encuestas y DOC-02A: plantillas paramétricas, realidad aumentada, cálculo de placas, cuentas, panel de la carpintería y comisión. Se quita el editor modular, la foto del ambiente como vista principal y la atención manual. |
