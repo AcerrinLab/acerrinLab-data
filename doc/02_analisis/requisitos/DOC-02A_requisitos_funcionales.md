@@ -97,7 +97,6 @@ Cada una responde a un dolor medido: F1 al 58% que mide mal y al 87% que valora 
 | RF-07 | El sistema genera el **despiece**: lista de piezas con medidas en mm y cantidad. | MVP | Para cada plantilla y medida, la suma de piezas coincide con el modelo. Probado con casos fijos. |
 | RF-08 | El sistema calcula **cuántas placas o tablas** hacen falta según el tamaño estándar del material (por ejemplo, 2,40 × 1,80 m). | MVP | Caso del testimonio 2: 5 piezas de 1,80 × 0,40 m en placa de 2,40 × 1,80 m da el resultado correcto. Siempre redondea hacia arriba. |
 | RF-09 | El sistema calcula **tornillos, bisagras/correderas y litros de barniz o pintura**. | MVP | Las cantidades se muestran en la lista de materiales con su unidad. |
-| RF-10 | El sistema muestra el **costo estimado de materiales**, marcado como **estimado** (no como precio real). | MVP | El total aparece con la etiqueta "estimado" y la fecha de los precios de referencia. |
 | RF-11 | El cliente **descarga un PDF** con medidas, despiece y lista de materiales para hacerlo por su cuenta. | Post-MVP | — |
 
 ### F3 – Encargalo a una carpintería
@@ -106,7 +105,7 @@ Cada una responde a un dolor medido: F1 al 58% que mide mal y al 87% que valora 
 |---|---|---|---|
 | RF-12 | Registro e inicio de sesión con roles **Cliente** y **Carpintería**. | MVP | Cada rol ve solo sus pantallas. Un cliente no puede acceder a la bandeja de una carpintería. |
 | RF-13 | La carpintería crea su **perfil**: nombre, zona, WhatsApp y materiales con los que trabaja. | MVP | El perfil aparece en el mapa solo si tiene zona y WhatsApp cargados. |
-| RF-14 | El cliente ve **carpinterías cercanas en un mapa** (Google Maps) que trabajan el material elegido. | MVP | El mapa muestra solo carpinterías que trabajan ese material. |
+| RF-14 | El cliente ve **carpinterías cercanas en un mapa** (Google Maps) | MVP | El mapa muestra solo carpinterías que trabajan ese material. |
 | RF-15 | El cliente **pide presupuesto** enviando diseño, medidas, material y despiece. | MVP | El pedido se crea en estado *Pendiente* y la carpintería lo ve con todos esos datos. |
 | RF-16 | La carpintería recibe un **aviso por WhatsApp** (vía n8n) con el enlace directo al pedido en su panel. WhatsApp es solo el aviso: toda la gestión se hace en el panel. | MVP | El aviso llega en menos de 1 minuto. Si falla, se reintenta y el pedido igual queda en la bandeja del panel. |
 | RF-17 | Desde el panel, la carpintería responde con un **presupuesto** que separa **materiales** y **mano de obra**, e indica si el cliente compra el material. | MVP | El pedido pasa a *Presupuestado* y el cliente ve el detalle. |
@@ -115,7 +114,7 @@ Cada una responde a un dolor medido: F1 al 58% que mide mal y al 87% que valora 
 
 #### Panel de la carpintería (interfaz propia del carpintero)
 
-La carpintería es quien paga la comisión, así que necesita una interfaz propia para trabajar los pedidos, no solo un mensaje. El panel es mobile first, porque el carpintero lo usa desde el taller con el celular.
+La carpintería es quien paga la comisión, así que necesita una interfaz propia para trabajar los pedidos, no solo un mensaje.
 
 | ID | Requisito | Alcance | Criterios de aceptación |
 |---|---|---|---|

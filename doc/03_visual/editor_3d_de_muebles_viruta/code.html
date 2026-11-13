@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary-fixed":"#ffddb8","bg-surface-tint":"#EFECE4","wood-light":"#E2C8A2","surface-container-high":"#ebe8e4","on-primary-fixed-variant":"#2d4e39","surface-container-lowest":"#ffffff","on-tertiary-fixed":"#2c1600","on-secondary":"#ffffff","on-secondary-fixed-variant":"#5b4224","on-surface-variant":"#424843","error-container":"#ffdad6","bg-surface":"#FFFFFF","on-tertiary-container":"#dcaa79","bg-canvas":"#FAF8F5","status-success":"#2D5A3F","on-tertiary-fixed-variant":"#623f18","surface-bright":"#fcf9f5","on-error":"#ffffff","wood-walnut":"#6E4E37","primary-container":"#2b4c38","surface-container-low":"#f6f3ef","border-stone-light":"#EAE6DE","secondary":"#745939","primary-fixed":"#c6ecd0","surface-tint":"#446650","status-warning":"#B87528","error":"#ba1a1a","on-secondary-container":"#795e3d","surface-container-highest":"#e5e2de","bg-surface-subtle":"#F5F2EB","inverse-surface":"#31302e","accent-interactive-hover":"#223E2E","inverse-primary":"#aacfb5","outline-variant":"#c2c8c1","tertiary-fixed-dim":"#f0bd8b","on-surface":"#1c1c1a","accent-interactive-active":"#1A3124","surface-container":"#f0edea","secondary-container":"#ffd9b0","on-background":"#1c1c1a","on-primary":"#ffffff","status-error":"#A6382C","primary":"#143523","tertiary":"#472803","surface-dim":"#dcdad6","background":"#fcf9f5","on-secondary-fixed":"#2a1801","inverse-on-surface":"#f3f0ec","surface-variant":"#e5e2de","tertiary-container":"#613e17","wood-natural":"#D4A373","outline":"#727972","secondary-fixed-dim":"#e4c099","border-stone-medium":"#D8D2C6","tertiary-fixed":"#ffdcbd","primary-fixed-dim":"#aacfb5","on-primary-container":"#97bca2","on-error-container":"#93000a","surface":"#fcf9f5","on-tertiary":"#ffffff","on-primary-fixed":"#002110"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xs":"0.25rem","space-sm":"0.75rem","margin":"1rem","space-xs":"0.5rem","margin-md":"1.5rem","space-xl":"2rem","space-lg":"1.5rem","space-md":"1rem","gutter-lg":"1.5rem","margin-lg":"2.5rem","gutter":"1rem","space-2xl":"3rem","gutter-md":"1.25rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"]},"fontSize":{"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}};</script></head><body class="bg-bg-canvas font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(43,76,56,0.05)]"><div class="h-16 max-w-7xl mx-auto px-margin-md flex items-center justify-between gap-gutter-lg"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-surface-container-lowest text-[20px]">architecture</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">VIRUTA</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Taller · Estudio</span></div></div><div class="h-6 w-px bg-border-stone-light hidden lg:block"></div><div class="hidden lg:flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-secondary text-[16px]">location_on</span><span class="font-label-md text-label-md">Jujuy, AR</span></div></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-primary text-on-primary font-label-lg rounded-lg"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary text-on-primary font-label-lg rounded-lg" data-path="editor-3d" href="#">Editor 3D</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="mis-proyectos-cliente" href="#">Mis Proyectos (Cliente)</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" data-path="panel-carpinteria" href="#">Panel Carpintería</a></nav><div class="flex items-center gap-space-sm"><button class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-wood-walnut"></span></button><div class="h-6 w-px bg-border-stone-light hidden sm:block"></div><div class="flex items-center gap-space-xs pl-space-2xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Martín Quispe</span><span class="font-label-sm text-label-sm text-on-surface-variant">Carpintería San Salvador</span></div></div></div></div></header><main class="w-full pt-16 bg-bg-canvas min-h-screen"><div class="flex flex-col w-full">
+<!-- Stepper de Flujo de Trabajo Constructivo -->
+<section class="w-full bg-surface-container-low/60 py-space-sm px-margin-md">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">view_in_ar</span>
+<span class="font-headline-sm text-headline-sm">Diseño de Aparador · Mueble #VRT-842</span>
+</div>
+<!-- Pasos numerados con estética de taller -->
+<nav aria-label="Progreso de diseño" class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-2xs text-on-surface-variant opacity-70">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-label-sm">1</span>
+<span class="font-label-md text-label-md hidden sm:inline">Espacio y cotas</span>
+</div>
+<div class="w-8 h-0.5 bg-border-stone-light"></div>
+<div class="flex items-center gap-space-2xs text-on-primary bg-primary px-space-sm py-space-2xs rounded-full shadow-sm">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">2</span>
+<span class="font-label-md text-label-md">Configurar mueble</span>
+</div>
+<div class="w-8 h-0.5 bg-border-stone-light"></div>
+<div class="flex items-center gap-space-2xs text-on-surface-variant">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-label-sm">3</span>
+<span class="font-label-md text-label-md hidden sm:inline">Despiece y cotización</span>
+</div>
+</nav>
+<div class="hidden lg:flex items-center gap-space-xs text-body-sm font-body-sm text-status-success bg-primary-fixed/30 px-space-sm py-space-2xs rounded-full">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Reglas IRAM · Tolerancia ±0.5 mm</span>
+</div>
+</div>
+</section>
+<!-- Espacio de Trabajo Principal: Arquitectura 3 Columnas -->
+<div class="w-full max-w-[1560px] mx-auto p-space-md lg:p-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- COLUMNA 1: Paleta de Módulos & Selector de Maderas Nativas / Melaminas (Cols 3) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Tarjeta de Piezas y Módulos -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Piezas constructivas</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Módulos estandarizados y herrajes</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">category</span>
+</div>
+<!-- Grilla de componentes -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-md" id="module-selector-grid">
+<!-- Módulo Tablero Superior -->
+<button class="group flex flex-col items-center justify-center p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container-highest transition-all text-center focus:outline-none focus:ring-2 focus:ring-primary-container" type="button">
+<div class="w-full h-16 bg-surface-container-highest rounded-md flex items-center justify-center mb-space-2xs group-hover:scale-[1.03] transition-transform">
+<svg class="w-12 h-8 text-wood-natural fill-current opacity-90" viewbox="0 0 64 36">
+<polygon points="12,4 52,4 62,14 2,14"></polygon>
+<polygon fill-opacity="0.85" points="2,14 62,14 62,18 2,18"></polygon>
+</svg>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Tablero sup.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">18 / 25 mm</span>
+</button>
+<!-- Módulo Laterales -->
+<button class="group flex flex-col items-center justify-center p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container-highest transition-all text-center focus:outline-none" type="button">
+<div class="w-full h-16 bg-surface-container-highest rounded-md flex items-center justify-center mb-space-2xs group-hover:scale-[1.03] transition-transform">
+<svg class="w-8 h-10 text-wood-natural fill-current opacity-90" viewbox="0 0 40 48">
+<polygon points="10,4 26,4 34,10 18,10"></polygon>
+<polygon fill-opacity="0.75" points="18,10 34,10 34,44 18,44"></polygon>
+<polygon fill-opacity="0.9" points="10,4 18,10 18,44 10,38"></polygon>
+</svg>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Laterales</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">Par vertical</span>
+</button>
+<!-- Módulo Estante Activo -->
+<button class="group flex flex-col items-center justify-center p-space-sm bg-surface-container-low rounded-lg bg-surface-container-highest transition-all text-center ring-2 ring-primary" type="button">
+<div class="w-full h-16 bg-surface-container-highest rounded-md flex items-center justify-center mb-space-2xs">
+<svg class="w-12 h-8 text-status-success fill-current" viewbox="0 0 64 36">
+<polygon points="10,8 54,8 60,16 4,16"></polygon>
+<polygon fill-opacity="0.7" points="4,16 60,16 60,20 4,20"></polygon>
+</svg>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-primary font-bold">Estante int.</span>
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">Cremallera 32mm</span>
+</button>
+<!-- Módulo Puerta Batiente -->
+<button class="group flex flex-col items-center justify-center p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container-highest transition-all text-center" type="button">
+<div class="w-full h-16 bg-surface-container-highest rounded-md flex items-center justify-center mb-space-2xs group-hover:scale-[1.03] transition-transform">
+<svg class="w-8 h-10 text-wood-light fill-current" viewbox="0 0 44 48">
+<rect height="36" rx="2" width="28" x="8" y="6"></rect>
+<rect fill="#143523" height="6" width="2" x="30" y="22"></rect>
+</svg>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Puerta batiente</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">Bisagra cazoleta</span>
+</button>
+<!-- Módulo Cajón -->
+<button class="group flex flex-col items-center justify-center p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container-highest transition-all text-center" type="button">
+<div class="w-full h-16 bg-surface-container-highest rounded-md flex items-center justify-center mb-space-2xs group-hover:scale-[1.03] transition-transform">
+<svg class="w-10 h-8 text-wood-natural fill-current" viewbox="0 0 54 40">
+<polygon points="6,12 48,12 52,28 2,28"></polygon>
+<rect fill="#FAF8F5" height="4" rx="2" width="18" x="18" y="18"></rect>
+</svg>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Cajonera</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">Telescópica 45kg</span>
+</button>
+<!-- Módulo Patas -->
+<button class="group flex flex-col items-center justify-center p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container-highest transition-all text-center" type="button">
+<div class="w-full h-16 bg-surface-container-highest rounded-md flex items-center justify-center mb-space-2xs group-hover:scale-[1.03] transition-transform">
+<svg class="w-6 h-9 text-wood-walnut fill-current" viewbox="0 0 32 44">
+<polygon points="6,4 26,4 20,38 12,38"></polygon>
+</svg>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Juego patas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[10px]">Cónicas 150mm</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-space-2xs py-space-xs px-space-sm rounded-lg bg-surface-container text-on-surface-variant text-center">
+<span class="material-symbols-outlined text-[16px] text-secondary">drag_pan</span>
+<span class="font-body-sm text-body-sm">Arrastrá piezas al visor para agregarlas</span>
+</div>
+</div>
+<!-- Tarjeta de Materialidad y Texturas -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Material y acabado</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Proveedores del NOA certificados</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">palette</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Opción 1: Roble Natural / Melamina sobre MDF (Seleccionada) -->
+<label class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors ring-2 ring-primary">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-wood-natural flex items-center justify-center text-on-primary shadow-sm relative overflow-hidden">
+<div class="absolute inset-0 opacity-40 bg-[radial-gradient(#6E4E37_1px,transparent_1px)] [background-size:6px_6px]"></div>
+<span class="material-symbols-outlined text-[18px] relative z-10">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Melamina Roble Terracota</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Espesor 18 mm · Veta continua</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold px-space-xs py-space-2xs bg-primary-fixed/40 rounded">En stock</span>
+</label>
+<!-- Opción 2: Pino Finger Joint Jujuy -->
+<label class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-wood-light flex items-center justify-center shadow-sm relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-[linear-gradient(45deg,#745939_25%,transparent_25%,transparent_50%,#745939_50%,#745939_75%,transparent_75%,transparent)] [background-size:8px_8px]"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Pino Finger Certificado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Macizo 20 mm · Bosque Las Yungas</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Taller San Pedro</span>
+</label>
+<!-- Opción 3: Melamina Blanco Glaciar Seda -->
+<label class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="w-4 h-4 rounded-full bg-border-stone-medium"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Blanco Glaciar Antihuella</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Espesor 18 mm · Frente puerta</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Combinado</span>
+</label>
+<!-- Opción 4: Nogal Tostado Oscuro -->
+<label class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-wood-walnut flex items-center justify-center shadow-sm">
+<span class="w-3 h-3 rounded-full bg-surface-container-lowest/30"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Enchapado Nogal Criollo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lustre poliuretánico mate</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-status-warning font-semibold">+ 15%</span>
+</label>
+</div>
+<!-- Selección de filos y cantos -->
+<div class="mt-space-md pt-space-sm border-t border-border-stone-light">
+<span class="font-label-md text-label-md text-on-surface block mb-space-2xs">Aplicación de cantos</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="px-space-xs py-space-xs rounded-md bg-primary text-on-primary font-label-sm text-label-sm text-center" type="button">PVC 2 mm biselado</button>
+<button class="px-space-xs py-space-xs rounded-md bg-surface-container text-on-surface-variant hover:bg-surface-container-highest font-label-sm text-label-sm text-center" type="button">Canto melamínico 0.4 mm</button>
+</div>
+</div>
+</div>
+<!-- Métrica de Taller y Huella de Material -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mb-space-2xs">
+<span>Rendimiento de placa estándar</span>
+<span class="font-semibold text-primary">78% aprovechamiento</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden mb-space-xs">
+<div class="bg-primary h-2 rounded-full" style="width: 78%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">
+            Corte optimizado con sierra escuadradora CNC. Merma estimada: 22% (reciclable en briquetas).
+          </p>
+</div>
+</aside>
+<!-- COLUMNA 2: Visor 3D Interactivo, Cotas en Tiempo Real y AR (Cols 6) -->
+<main class="lg:col-span-6 flex flex-col gap-space-md">
+<!-- Contenedor del Viewport 3D -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm flex flex-col">
+<!-- Encabezado del visor con Tabs conmutables -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-primary">Visor interactivo</h1>
+<span class="w-2.5 h-2.5 rounded-full bg-status-success animate-pulse" title="Render en tiempo real"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Perspectiva axonométrica y acotaciones milimétricas</p>
+</div>
+<!-- Segmented Control de vistas -->
+<div class="inline-flex p-1 bg-surface-container rounded-lg" role="tablist">
+<button class="px-space-sm py-1.5 rounded-md bg-primary text-on-primary font-label-md text-label-md shadow-sm flex items-center gap-1" id="tab-btn-3d" type="button">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+<span>Modelo 3D</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1" id="tab-btn-ar" type="button">
+<span class="material-symbols-outlined text-[16px]">ar_on_you</span>
+<span>En tu espacio</span>
+</button>
+<button class="px-space-sm py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1" id="tab-btn-2d" type="button">
+<span class="material-symbols-outlined text-[16px]">straighten</span>
+<span>Plano técnico 2D</span>
+</button>
+</div>
+</div>
+<!-- Escenario 3D Central con Ilustración de Mueble y Cotas Eje X, Y, Z -->
+<div class="relative w-full aspect-[4/3] bg-gradient-to-b from-surface-container-low to-surface-container rounded-xl overflow-hidden flex items-center justify-center p-space-lg select-none group">
+<!-- Cuadrícula / Piso Isométrico Sutil -->
+<div class="absolute inset-0 opacity-30 bg-[linear-gradient(to_right,#D8D2C6_1px,transparent_1px),linear-gradient(to_bottom,#D8D2C6_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+<!-- Botones flotantes de cámara y control de escena -->
+<div class="absolute top-4 left-4 z-20 flex flex-col gap-1.5 bg-surface/90 backdrop-blur-md p-1 rounded-lg shadow-sm">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-highest transition-colors" title="Girar vista" type="button">
+<span class="material-symbols-outlined text-[18px]">rotate_90_degrees_ccw</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-highest transition-colors" title="Acercar" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-highest transition-colors" title="Alejar" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container-highest transition-colors" title="Reiniciar encuadre" type="button">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+</button>
+</div>
+<!-- Botón AR y modo foto superpuesto -->
+<div class="absolute top-4 right-4 z-20">
+<button class="flex items-center gap-1.5 bg-surface/90 hover:bg-surface text-primary px-space-sm py-1.5 rounded-lg shadow-sm font-label-md text-label-md backdrop-blur-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-status-success">smartphone</span>
+<span>Probar con cámara (AR)</span>
+</button>
+</div>
+<!-- Cota Milimétrica Superior (Ancho: 1200 mm) -->
+<div class="absolute top-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
+<div class="flex items-center gap-2">
+<div class="w-24 md:w-48 h-px bg-secondary"></div>
+<span class="bg-surface px-2 py-0.5 rounded text-[11px] font-bold text-secondary shadow-sm tracking-wider">1200 mm</span>
+<div class="w-24 md:w-48 h-px bg-secondary"></div>
+</div>
+<div class="flex justify-between w-full text-[9px] text-secondary">
+<span>|</span>
+<span>|</span>
+</div>
+</div>
+<!-- Cota Milimétrica Lateral (Alto: 900 mm) -->
+<div class="absolute left-6 top-1/2 -translate-y-1/2 z-10 hidden sm:flex items-center gap-1">
+<div class="flex flex-col items-center">
+<span class="text-[9px] text-secondary">—</span>
+<div class="h-28 md:h-36 w-px bg-secondary"></div>
+<span class="bg-surface px-1.5 py-0.5 rounded text-[10px] font-bold text-secondary shadow-sm my-1 [writing-mode:vertical-lr] rotate-180">900 mm</span>
+<div class="h-28 md:h-36 w-px bg-secondary"></div>
+<span class="text-[9px] text-secondary">—</span>
+</div>
+</div>
+<!-- Cota de Profundidad (400 mm) -->
+<div class="absolute right-8 bottom-12 z-10 flex items-center gap-1 bg-surface/80 px-2 py-0.5 rounded shadow-sm text-secondary text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">open_in_full</span>
+<span>Prof. 400 mm</span>
+</div>
+<!-- RENDER DEL MUEBLE (SVG TÉCNICO INTERACTIVO Y FOTO-REALISTA) -->
+<div class="relative z-0 w-[90%] max-w-[480px] drop-shadow-xl transition-transform duration-300 transform group-hover:scale-[1.01]" id="furniture-3d-model">
+<svg class="w-full h-auto" viewbox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="oakTop" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#D4A373"></stop>
+<stop offset="50%" stop-color="#E2C8A2"></stop>
+<stop offset="100%" stop-color="#B88653"></stop>
+</lineargradient>
+<lineargradient id="oakInside" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#9C7249"></stop>
+<stop offset="100%" stop-color="#6E4E37"></stop>
+</lineargradient>
+<lineargradient id="whiteDoor" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#FFFFFF"></stop>
+<stop offset="100%" stop-color="#ECEAE4"></stop>
+</lineargradient>
+<filter height="140%" id="shelfGlow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="2" flood-color="#2D5A3F" flood-opacity="0.3" stddeviation="3"></fedropshadow>
+</filter>
+</defs>
+<!-- Sombra de contacto en el piso -->
+<ellipse cx="250" cy="330" fill="#1C1C1A" opacity="0.12" rx="205" ry="18"></ellipse>
+<!-- Patas Cónicas de Madera Maciza -->
+<polygon fill="#6E4E37" points="105,275 125,275 120,325 110,325"></polygon>
+<polygon fill="#472803" opacity="0.8" points="140,270 156,270 152,315 144,315"></polygon>
+<polygon fill="#472803" opacity="0.8" points="360,270 376,270 372,315 364,315"></polygon>
+<polygon fill="#6E4E37" points="390,275 410,275 405,325 395,325"></polygon>
+<!-- Casco Principal / Mueble Exterior -->
+<rect fill="#B88653" height="195" rx="3" width="345" x="85" y="80"></rect>
+<!-- Interior izquierdo (hueco abierto con fondo) -->
+<rect fill="url(#oakInside)" height="171" width="168" x="97" y="92"></rect>
+<!-- Canto de espesor 18mm visible -->
+<rect fill="url(#oakTop)" height="12" width="345" x="85" y="80"></rect>
+<rect fill="#9C7249" height="183" width="12" x="85" y="92"></rect>
+<rect fill="#745939" height="183" width="12" x="418" y="92"></rect>
+<rect fill="#745939" height="12" width="345" x="85" y="263"></rect>
+<!-- Separador vertical medio (parante divisorio 18mm) -->
+<rect fill="#745939" height="171" width="12" x="265" y="92"></rect>
+<!-- PIEZA ACTIVA SELECCIONADA: Estante regulable izquierdo -->
+<g class="cursor-pointer" id="active-shelf">
+<!-- Plano del estante iluminado con selector verde taller -->
+<polygon fill="#2D5A3F" filter="url(#shelfGlow)" opacity="0.35" points="97,175 265,175 265,183 97,183"></polygon>
+<rect fill="url(#oakTop)" height="8" width="168" x="97" y="179"></rect>
+<rect fill="none" height="8" stroke="#2D5A3F" stroke-width="1.5" width="168" x="97" y="179"></rect>
+<!-- Gizmo de movimiento 3D interactivo -->
+<g transform="translate(181, 160)">
+<circle cx="0" cy="0" fill="#2D5A3F" r="10"></circle>
+<path d="M0,7 L0,-7 M-4,-3 L0,-7 L4,-3" fill="none" stroke="#FFFFFF" stroke-width="2"></path>
+<path d="M-7,0 L7,0 M-3,-4 L-7,0 L-3,4 M3,-4 L7,0 L3,4" fill="none" stroke="#FFFFFF" stroke-width="1.5"></path>
+</g>
+</g>
+<!-- Módulo Derecho: Puerta blanca con tirador en madera -->
+<g>
+<rect fill="url(#whiteDoor)" height="171" rx="2" width="141" x="277" y="92"></rect>
+<rect fill="none" height="171" rx="2" stroke="#D8D2C6" stroke-width="1" width="141" x="277" y="92"></rect>
+<!-- Tirador listón escandinavo -->
+<rect fill="#745939" height="34" rx="2" width="6" x="402" y="152"></rect>
+<rect fill="#B88653" height="32" rx="1" width="4" x="403" y="153"></rect>
+</g>
+</svg>
+</div>
+<!-- Notificación de selección contextual -->
+<div class="absolute bottom-4 left-4 z-20 flex items-center gap-space-2xs bg-surface/95 px-space-sm py-1.5 rounded-lg shadow-sm border-l-4 border-status-success">
+<span class="material-symbols-outlined text-status-success text-[18px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface">Selección activa: <strong>Estante izquierdo</strong></span>
+<span class="text-on-surface-variant text-[11px] ml-1">(Alt: +420 mm)</span>
+</div>
+</div>
+<!-- Barra Inferior de Inspección y Comprobación Dimensional -->
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Entrada Ancho -->
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant">Ancho total</span>
+<div class="flex items-center gap-1">
+<input class="w-16 text-right font-headline-sm text-headline-sm text-primary bg-surface rounded px-2 py-0.5 focus:outline-none focus:ring-1 focus:ring-primary" type="number" value="120"/>
+<span class="font-label-md text-label-md text-on-surface-variant">cm</span>
+</div>
+</div>
+<!-- Entrada Alto -->
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant">Alto total</span>
+<div class="flex items-center gap-1">
+<input class="w-16 text-right font-headline-sm text-headline-sm text-primary bg-surface rounded px-2 py-0.5 focus:outline-none focus:ring-1 focus:ring-primary" type="number" value="90"/>
+<span class="font-label-md text-label-md text-on-surface-variant">cm</span>
+</div>
+</div>
+<!-- Entrada Profundidad -->
+<div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface-variant">Profundidad</span>
+<div class="flex items-center gap-1">
+<input class="w-16 text-right font-headline-sm text-headline-sm text-primary bg-surface rounded px-2 py-0.5 focus:outline-none focus:ring-1 focus:ring-primary" type="number" value="40"/>
+<span class="font-label-md text-label-md text-on-surface-variant">cm</span>
+</div>
+</div>
+</div>
+<!-- Banner Informativo de Validación Espacial (RNF-02) -->
+<div class="mt-space-sm p-space-sm bg-primary-fixed/20 rounded-lg flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">aspect_ratio</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-primary-fixed-variant font-bold">Comprobación de vano: 1800 × 850 × 600 mm</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">El mueble entra con holgura de 300 mm por lado y 100 mm de ventilación trasera.</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-status-success font-bold px-2 py-1 bg-surface rounded-full shadow-sm">Apto</span>
+</div>
+</div>
+<!-- Ficha de foto de referencia del cliente / Contexto de Habitación -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md w-full md:w-auto">
+<div class="w-20 h-16 rounded-lg bg-cover bg-center overflow-hidden flex-shrink-0 relative shadow-inner" data-alt="A brightly lit living room corner in Jujuy Argentina with warm pine wood floors, light stucco walls, and a large sunny window ready for custom bespoke furniture fitting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWtlDn7o4kyfKVio2E_IyNJFwKyRhHfsyWuSzrE05A04MmfquDXb9rUnU3_4G2jCcDCeHKZbJGxROyOJaNKu92PBHijCFKJErgS7G40FRtutfO_FEEEsPQaGpJxtwvEUJXYGvN3X5z1K0hh_pgiEOKOiD-iI8PGfcUr-4jyz4s2cId8Z0bQXA-jMonAQAmJ2zxkLliSwBESwRiSh1laamjFclhz-RZRyoe4lJ4PR0')">
+<span class="absolute bottom-1 right-1 bg-surface/90 text-[10px] font-bold px-1 rounded text-primary">Living</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Foto de referencia cargada</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Living comedor · Pared norte · Zócalo 70 mm</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto justify-end">
+<button class="px-space-sm py-space-2xs rounded-lg bg-surface-container-low hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_a_photo</span>
+<span>Reemplazar foto</span>
+</button>
+<button class="px-space-sm py-space-2xs rounded-lg bg-surface-container-low hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Calibrar escala</span>
+</button>
+</div>
+</div>
+</main>
+<!-- COLUMNA 3: Ficha Técnica & Despiece en Tiempo Real (Cols 3) -->
+<aside class="lg:col-span-3 flex flex-col gap-space-md">
+<!-- Tarjeta de Ficha Técnica de Fabricación -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-border-stone-light">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Ficha de corte</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">DOC-FAB-09</span>
+</div>
+<!-- Micro-vista esquemática 2D de frente y planta -->
+<div class="my-space-sm p-space-xs bg-surface-container-low rounded-lg flex flex-col items-center">
+<div class="text-[11px] font-label-sm text-on-surface-variant self-start mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">architecture</span>
+<span>Esquema ortogonal (Frente / Planta)</span>
+</div>
+<svg class="w-full h-24 text-on-surface stroke-current fill-none stroke-[1.2]" viewbox="0 0 240 100">
+<!-- Frente con medidas -->
+<rect height="60" rx="1" width="100" x="20" y="10"></rect>
+<line x1="70" x2="70" y1="10" y2="70"></line>
+<line stroke-dasharray="2 2" x1="20" x2="70" y1="40" y2="40"></line>
+<line x1="28" x2="25" y1="70" y2="82"></line>
+<line x1="38" x2="35" y1="70" y2="82"></line>
+<line x1="102" x2="99" y1="70" y2="82"></line>
+<line x1="112" x2="109" y1="70" y2="82"></line>
+<line x1="105" x2="105" y1="35" y2="45"></line>
+<text fill="#745939" font-size="8" font-weight="bold" stroke="none" text-anchor="middle" x="55" y="94">1200 mm</text>
+<!-- Planta superior -->
+<rect height="30" rx="1" width="85" x="140" y="25"></rect>
+<text fill="#745939" font-size="8" stroke="none" text-anchor="middle" x="182" y="70">Prof. 400 mm</text>
+</svg>
+</div>
+<!-- Tabla de Despiece Milimétrico Automático (RNF-01) -->
+<div class="space-y-space-xs mb-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant px-1 uppercase tracking-wider">
+<span>Pieza / Función</span>
+<span>Cant. · Cotas (mm)</span>
+</div>
+<!-- Fila 1: Tapa superior -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Tablero superior</span>
+<span class="text-[11px] text-on-surface-variant">Roble 18 mm · Canto 4 lados</span>
+</div>
+<div class="text-right font-mono text-[12px] text-primary font-bold">
+                1 × 1200 × 400
+              </div>
+</div>
+<!-- Fila 2: Laterales -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Laterales costado</span>
+<span class="text-[11px] text-on-surface-variant">Roble 18 mm · Ranurado p/fondo</span>
+</div>
+<div class="text-right font-mono text-[12px] text-primary font-bold">
+                2 × 720 × 396
+              </div>
+</div>
+<!-- Fila 3: Base inferior -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Piso / Base</span>
+<span class="text-[11px] text-on-surface-variant">Roble 18 mm</span>
+</div>
+<div class="text-right font-mono text-[12px] text-primary font-bold">
+                1 × 1164 × 396
+              </div>
+</div>
+<!-- Fila 4: Divisorio medio -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Divisorio vertical</span>
+<span class="text-[11px] text-on-surface-variant">Roble 18 mm</span>
+</div>
+<div class="text-right font-mono text-[12px] text-primary font-bold">
+                1 × 702 × 380
+              </div>
+</div>
+<!-- Fila 5: Estante regulable -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low text-body-sm font-body-sm border-l-2 border-primary">
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Estante móvil</span>
+<span class="text-[11px] text-on-surface-variant">Roble 18 mm (-2 mm huelgo)</span>
+</div>
+<div class="text-right font-mono text-[12px] text-primary font-bold">
+                1 × 571 × 370
+              </div>
+</div>
+<!-- Fila 6: Puerta batiente -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Puerta ciega</span>
+<span class="text-[11px] text-on-surface-variant">Blanco Glaciar 18 mm</span>
+</div>
+<div class="text-right font-mono text-[12px] text-primary font-bold">
+                1 × 698 × 588
+              </div>
+</div>
+<!-- Fila 7: Fondo 3mm -->
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Fondo fibroplus</span>
+<span class="text-[11px] text-on-surface-variant">MDF 3 mm guillotina</span>
+</div>
+<div class="text-right font-mono text-[12px] text-primary font-bold">
+                1 × 1184 × 722
+              </div>
+</div>
+</div>
+<!-- Cómputo de Placas y Herrajes -->
+<div class="p-space-sm bg-surface-container rounded-lg space-y-space-xs text-body-sm font-body-sm mb-space-md">
+<span class="font-label-md text-label-md text-primary block border-b border-border-stone-light pb-1">Cómputo de materiales</span>
+<div class="flex justify-between text-on-surface">
+<span>Placas Melamina (2.75 × 1.83 m):</span>
+<strong class="text-primary font-mono">1.2 (Requiere 2 u.)</strong>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>Canto PVC pegado con cola pur:</span>
+<strong class="font-mono">14.8 metros lineales</strong>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>Bisagras cazoleta 35mm c/freno:</span>
+<strong class="font-mono">2 unidades (Häfele)</strong>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>Soportes estante niquelados:</span>
+<strong class="font-mono">4 unidades</strong>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>Patas cónicas macizas c/planchuela:</span>
+<strong class="font-mono">4 u. (h=150 mm)</strong>
+</div>
+</div>
+<!-- Botones de Acción de Exportación y Presupuesto -->
+<div class="space-y-space-xs">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-primary hover:bg-accent-interactive-hover active:bg-accent-interactive-active text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">send_and_archive</span>
+<span>Solicitar presupuesto a carpinterías</span>
+</button>
+<button class="w-full py-space-xs px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container font-label-md text-label-md text-on-surface flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Descargar ficha técnica PDF</span>
+</button>
+</div>
+<div class="mt-space-sm text-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">
+              Envío directo a la Red de Carpinterías de Jujuy (San Salvador, Palpalá, San Pedro)
+            </span>
+</div>
+</div>
+<!-- Tarjeta de Carpintero Local Destacado de Turno -->
+<div class="bg-surface rounded-xl p-space-md shadow-sm border-l-4 border-secondary">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-cover bg-center flex-shrink-0" data-alt="Portrait photo of a friendly experienced Argentine carpenter in Jujuy working in his tidy sawdust-dusted woodworking atelier wearing a canvas apron." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDMkT9o41b6CEpzrBVLB7maFETBhHt_iJ2UmUDVGQ2Kj15YVp0ed6Oe97PI_lcx5dDiBhcjmLZYoK_I6il_kHcEYlcfyeDOWoxu7wPTSc87Ka_faiZV7KDWaYkcX5tLyhvZHq-auBLgSi90NoB8-68m1WqAe0CIObuntvIfUTLO11O2ljm2bTLxUOoKfA__5qeFL0asECRjYOrq31wykGMM1zCRXNj1mI4uPFIUCgM')"></div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Taller Los Alisos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Especialistas en ensamble CNC y lustre</span>
+<div class="flex items-center gap-1 mt-1 text-status-success font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Plazo estimado: 10 a 14 días hábiles</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Micro-interacción: Lógica de alternancia básica entre pestañas de vista -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn3D = document.getElementById('tab-btn-3d');
+      const btnAR = document.getElementById('tab-btn-ar');
+      const btn2D = document.getElementById('tab-btn-2d');
+      const buttons = [btn3D, btnAR, btn2D];
+
+      buttons.forEach(btn => {
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+          btn.classList.remove('text-on-surface-variant');
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-xl mt-space-2xl"><div class="max-w-7xl mx-auto px-margin-md flex flex-col md:flex-row items-center justify-between gap-gutter"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary">VIRUTA</span><span class="text-border-stone-medium">·</span><span class="font-body-sm text-body-sm text-on-surface-variant">Plataforma de Ebanistería y Fabricación Digital · Quebrada y Valles, Jujuy</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">Normas de Producción</a><a class="hover:text-primary transition-colors" href="#">Maderas Nativas Certificadas</a><a class="hover:text-primary transition-colors" href="#">Red de Talleres</a></div></div></footer></body></html>

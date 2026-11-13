@@ -29,11 +29,3 @@
 | RNF-13 | Despliegue | Backend y **MySQL** en **Docker**; frontend en Vercel; mismo entorno en desarrollo y producción. | tecnologias.md |
 | RNF-14 | Costos | Solo niveles gratuitos (Google Maps, n8n, Gemini cuando se sume) con límites de uso configurados. | Workshop |
 | RNF-15 | Localización | Español rioplatense, pesos argentinos (ARS), sistema métrico. | Público de Jujuy |
-
-## Historial
-
-| Versión | Fecha | Cambio |
-| --- | --- | --- |
-| 0.1 | 12/11/2026 | Primera versión a partir de encuestas y testimonios. |
-| 0.2 | 12/11/2026 | Reestructurado según los workshops: MVP vertical de 3 funcionalidades, criterios de aceptación, máquina de estados y fuera de alcance. |
-| 0.3 | 12/11/2026 | Panel de la carpintería dentro del MVP; separación en DOC-02A (funcionales) y DOC-02B (no funcionales); formato del estándar doc/. |
